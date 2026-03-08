@@ -19,18 +19,19 @@ Biblioteca Digital es un sitio web que permite a los usuarios explorar, buscar y
 
 ## Tecnologías Utilizadas
 
-| Tecnología | Uso |
-|---|---|
-| HTML5 | Estructura del sitio |
-| CSS3 | Estilos y diseño visual |
-| JavaScript | Interactividad |
-| Git | Control de versiones |
-| GitHub | Repositorio remoto |
-
+| Tecnología | Uso                     |
+| ---------- | ----------------------- |
+| HTML5      | Estructura del sitio    |
+| CSS3       | Estilos y diseño visual |
+| JavaScript | Interactividad          |
+| Git        | Control de versiones    |
+| GitHub     | Repositorio remoto      |
 
 ## Autores
 
-**[Tu Nombre Aquí]**
+**Ciro Enrique Rivera López**
+**Gustavo Tapia Oriz**
+**Luz Lisanya Castellanos Musitos**
+**Diego Alexander Ramirez Rodriguez**
 Materia: Diseño y Elaboración de Sitios Web
 Institución: [Nombre de tu escuela]
-
