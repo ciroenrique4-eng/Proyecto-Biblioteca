@@ -29,9 +29,9 @@ Biblioteca Digital es un sitio web que permite a los usuarios explorar, buscar y
 
 ## Autores
 
-**Ciro Enrique Rivera López**
-**Gustavo Tapia Oriz**
-**Luz Lisanya Castellanos Musitos**
-**Diego Alexander Ramirez Rodriguez**
+- **Ciro Enrique Rivera López**
+- **Gustavo Tapia Oriz**
+- **Luz Lisanya Castellanos Musitos**
+- **Diego Alexander Ramirez Rodriguez**
+
 Materia: Diseño y Elaboración de Sitios Web
-Institución: [Nombre de tu escuela]
