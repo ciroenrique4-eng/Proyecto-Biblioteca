@@ -13,7 +13,7 @@ Biblioteca Digital es un sitio web que permite a los usuarios explorar, buscar y
 ## Objetivos del Proyecto
 
 - Diseñar una interfaz web atractiva y fácil de usar.
-- Implementar buenas prácticas de HTML, CSS y JavaScript.
+- Queremos que se note nuestro progeso el hacer paginas web.
 
 ---
 
