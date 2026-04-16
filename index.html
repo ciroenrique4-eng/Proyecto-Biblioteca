@@ -5,6 +5,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Biblioteca</title>
+        <style>
+            img.debajo {
+                position: absolute;
+                left: 0px;
+                top: 100px;
+                z-index: -1;
+            }
+            div.banner {
+                color: white;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -34,21 +45,31 @@
 
         <!--Contenido principal-->
         <br />
-        <h3 id="titulo" align="left">Sinopsis del libro</h3>
-        <p align="left">
-            "Wiri wiri, aqui va a ir dinamicamente la sinopsis del libro, pero por ahora es un texto de relleno para
-            mostrar como se verá el sitio web."
-        </p>
+        <div class="banner">
+            <h3 id="titulo" align="left">Sinopsis del libro</h3>
+            <p align="left">
+                "Wiri wiri, aqui va a ir dinamicamente la sinopsis del libro, pero por ahora es un texto de relleno para
+                mostrar como se verá el sitio web."
+            </p>
 
-        <br />
-        <img src="Recursos/Imagen.png" alt="Portada del libro" align="center" width="100%" height="200px" />
-        <h1 align="center">"Libro más popular"</h1>
+            <br />
+            <img
+                class="debajo"
+                src="Recursos/Imagen.png"
+                alt="Portada del libro"
+                align="center"
+                width="100%"
+                height="300px"
+            />
+            <h1 align="center">"Libro más popular"</h1>
 
-        <h3 align="right">¿Por qué leerlo?</h3>
-        <p align="right">
-            "Aqui va a ir dinamicamente la razón por la cual uno debería leer este libro, pero por ahora es un texto de
-            relleno para mostrar como se verá el sitio web."
-        </p>
+            <h3 align="right">¿Por qué leerlo?</h3>
+            <p align="right">
+                "Aqui va a ir dinamicamente la razón por la cual uno debería leer este libro, pero por ahora es un texto
+                de relleno para mostrar como se verá el sitio web."
+            </p>
+        </div>
+
         <!--Seccion de Libros Populares-->
         <br />
         <h3 align="left">Populares</h3>
