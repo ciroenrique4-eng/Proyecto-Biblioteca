@@ -19,28 +19,20 @@
     </head>
     <body>
         <header>
-            <table>
-                <tr>
-                    <td>
-                        <h2><a href="index.html">AZUU</a></h2>
-                    </td>
-                    <td>
-                        <p><a href="explorar.html">Explorar</a></p>
-                    </td>
-                    <td>
-                        <p><a href="mi_lista.html">Mi Lista</a></p>
-                    </td>
-                    <td>
-                        <p><a href="crear_cuenta.html">Registro</a></p>
-                    </td>
-                    <td>
-                        <p><a href="login.html">Iniciar Sesión</a></p>
-                    </td>
-                    <td>
-                        <form><input type="search" placeholder="Buscar Libros..." /></form>
-                    </td>
-                </tr>
-            </table>
+            <nav class="navbar">
+                <div class="nav-item nav-brand">
+                    <h2><a href="index.html">AZUU</a></h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="explorar.html">Explorar</a></li>
+                    <li class="nav-item"><a href="mi_lista.html">Mi Lista</a></li>
+                    <li class="nav-item"><a href="crear_cuenta.html">Registro</a></li>
+                    <li class="nav-item"><a href="login.html">Iniciar Sesión</a></li>
+                </ul>
+                <div class="nav-search">
+                    <form><input type="search" placeholder="Buscar Libros..." /></form>
+                </div>
+            </nav>
         </header>
 
         <!--Contenido principal-->
@@ -72,39 +64,37 @@
 
         <!--Seccion de Libros Populares-->
         <br />
-        <h3 align="left">Populares</h3>
-        <table align="left" cellpadding="10">
-            <tr>
-                <td>
-                    <!--Va a ser muy tedioso tener un html nuevo por cada lirbo, por eso vamos a usar un solo html para todos los libros, 
-                    sin embargo, si queremos logrear esto necesitamos de javascript, pero por ahora no lo usaremos, ya que solo nos estamos 
-                    centrando en el HTML del sitio web-->
-                    <a href="libro.html">
-                        <img src="Recursos/harrypoter.jpg" alt="Portada del libro" width="150" height="200px" />
-                    </a>
-                </td>
-                <td>
-                    <a href="libro.html">
-                        <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="Portada del libro" width="150" height="200px" />
-                    </a>
-                </td>
-                <td>
-                    <a href="libro.html">
-                        <img src="Recursos/Dracula.jpg" alt="Portada del libro" width="150" height="200px" />
-                    </a>
-                </td>
-                <td>
-                    <a href="libro.html">
-                        <img
-                            src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
-                            alt="Portada del libro"
-                            width="150"
-                            height="200px"
-                        />
-                    </a>
-                </td>
-            </tr>
-        </table>
+        <h3>Populares</h3>
+        <div class="galeria-libros">
+            <!--Va a ser muy tedioso tener un html nuevo por cada lirbo, por eso vamos a usar un solo html para todos los libros, 
+            sin embargo, si queremos logrear esto necesitamos de javascript, pero por ahora no lo usaremos, ya que solo nos estamos 
+            centrando en el HTML del sitio web-->
+            <div class="libro-item">
+                <a href="libro.html">
+                    <img src="Recursos/harrypoter.jpg" alt="Portada del libro" width="150" height="200px" />
+                </a>
+            </div>
+            <div class="libro-item">
+                <a href="libro.html">
+                    <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="Portada del libro" width="150" height="200px" />
+                </a>
+            </div>
+            <div class="libro-item">
+                <a href="libro.html">
+                    <img src="Recursos/Dracula.jpg" alt="Portada del libro" width="150" height="200px" />
+                </a>
+            </div>
+            <div class="libro-item">
+                <a href="libro.html">
+                    <img
+                        src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
+                        alt="Portada del libro"
+                        width="150"
+                        height="200px"
+                    />
+                </a>
+            </div>
+        </div>
         <!--Fin de la sección de Libros Populares-->
         <br clear="all" />
         <!--Sección de Libros Por Género-->
@@ -112,15 +102,15 @@
         <br />
         <h3 align="center">Explorar por Género</h3>
 
-        <p>Terror</p>
-        <table cellpadding="10">
-            <tr>
-                <td>
+        <div class="genero-seccion">
+            <h4>Terror</h4>
+            <div class="galeria-libros">
+                <div class="libro-item">
                     <a href="libro.html">
                         <img src="Recursos/libroIT.jpg" alt="Portada del libro" width="150" height="200px" />
                     </a>
-                </td>
-                <td>
+                </div>
+                <div class="libro-item">
                     <a href="libro.html">
                         <img
                             src="Recursos/Shirley Jackson, Jordan Peele and More_ 15 Terrifying Books to Read This Halloween.jpg"
@@ -129,13 +119,13 @@
                             height="200px"
                         />
                     </a>
-                </td>
-                <td>
+                </div>
+                <div class="libro-item">
                     <a href="libro.html">
                         <img src="Recursos/Dracula.jpg" alt="Portada del libro" width="150" height="200px" />
                     </a>
-                </td>
-                <td>
+                </div>
+                <div class="libro-item">
                     <a href="libro.html">
                         <img
                             src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
@@ -144,34 +134,34 @@
                             height="200px"
                         />
                     </a>
-                </td>
-                <td>
+                </div>
+                <div class="libro-item">
                     <a href="libro.html">
                         <img src="Recursos/la maldicion.jpg" alt="Portada del libro" width="150" height="200px" />
                     </a>
-                </td>
-                <td>
+                </div>
+                <div class="libro-item">
                     <a href="libro.html">
                         <img src="Recursos/Pet Semetary_.jpg" alt="Portada del libro" width="150" height="200px" />
                     </a>
-                </td>
-            </tr>
-        </table>
+                </div>
+            </div>
+        </div>
 
-        <p>Fantasía</p>
-        <table cellpadding="10">
-            <tr>
-                <td>
+        <div class="genero-seccion">
+            <h4>Fantasía</h4>
+            <div class="galeria-libros">
+                <div class="libro-item">
                     <a href="libro.html">
                         <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="Portada del libro" width="150" height="200px" />
                     </a>
-                </td>
-                <td>
+                </div>
+                <div class="libro-item">
                     <a href="libro.html">
                         <img src="Recursos/harrypoter.jpg" alt="Portada del libro" width="150" height="200px" />
                     </a>
-                </td>
-                <td>
+                </div>
+                <div class="libro-item">
                     <a href="libro.html">
                         <img
                             src="Recursos/A Game of Thrones _ Book 1 of A Song of Ice and Fire.jpg"
@@ -180,8 +170,8 @@
                             height="200px"
                         />
                     </a>
-                </td>
-                <td>
+                </div>
+                <div class="libro-item">
                     <a href="libro.html">
                         <img
                             src="Recursos/The Name of the Wind (The Kingkiller Chronicle).jpg"
@@ -190,8 +180,8 @@
                             height="200px"
                         />
                     </a>
-                </td>
-                <td>
+                </div>
+                <div class="libro-item">
                     <a href="libro.html">
                         <img
                             src="Recursos/The Lion, the Witch and the Wardrobe.jpg"
@@ -200,8 +190,8 @@
                             height="200px"
                         />
                     </a>
-                </td>
-                <td>
+                </div>
+                <div class="libro-item">
                     <a href="libro.html">
                         <img
                             src="Recursos/The Way of Kings - Brian Sanderson.jpg"
@@ -210,9 +200,9 @@
                             height="200px"
                         />
                     </a>
-                </td>
-            </tr>
-        </table>
+                </div>
+            </div>
+        </div>
 
         <hr />
         <footer>

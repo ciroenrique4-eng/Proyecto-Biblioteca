@@ -9,28 +9,20 @@
 
     <body>
         <header>
-            <table>
-                <tr>
-                    <td>
-                        <h2><a href="index.html">AZUU</a></h2>
-                    </td>
-                    <td>
-                        <p><a href="explorar.html">Explorar</a></p>
-                    </td>
-                    <td>
-                        <p><a href="mi_lista.html">Mi Lista</a></p>
-                    </td>
-                    <td>
-                        <p><a href="crear_cuenta.html">Registro</a></p>
-                    </td>
-                    <td>
-                        <p><a href="login.html">Iniciar Sesión</a></p>
-                    </td>
-                    <td>
-                        <form><input type="search" placeholder="Buscar Libros..." /></form>
-                    </td>
-                </tr>
-            </table>
+            <nav class="navbar">
+                <div class="nav-item nav-brand">
+                    <h2><a href="index.html">AZUU</a></h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="explorar.html">Explorar</a></li>
+                    <li class="nav-item"><a href="mi_lista.html">Mi Lista</a></li>
+                    <li class="nav-item"><a href="crear_cuenta.html">Registro</a></li>
+                    <li class="nav-item"><a href="login.html">Iniciar Sesión</a></li>
+                </ul>
+                <div class="nav-search">
+                    <form><input type="search" placeholder="Buscar Libros..." /></form>
+                </div>
+            </nav>
         </header>
 
         <!-- siguiendo la misma regla que en el index, pero por ahora 
@@ -40,60 +32,54 @@
 
         <hr />
         <br />
-        <h2 align="left">Leyendo Actualmente</h2>
+        <h2>Leyendo Actualmente</h2>
 
-        <table align="left" cellpadding="10">
-            <tr>
-                <td>
-                    <a href="libro.html">
-                        <img src="Recursos/harrypoter.jpg" alt="Libro actual" width="150" height="200px" />
-                    </a>
-                    <p>Harry Potter</p>
-                </td>
-                <td>
-                    <a href="libro.html">
-                        <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="Libro actual" width="150" height="200px" />
-                    </a>
-                    <p>El Hobbit</p>
-                </td>
-            </tr>
-        </table>
+        <div class="galeria-libros">
+            <div class="libro-item">
+                <a href="libro.html">
+                    <img src="Recursos/harrypoter.jpg" alt="Libro actual" width="150" height="200px" />
+                </a>
+                <p>Harry Potter</p>
+            </div>
+            <div class="libro-item">
+                <a href="libro.html">
+                    <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="Libro actual" width="150" height="200px" />
+                </a>
+                <p>El Hobbit</p>
+            </div>
+        </div>
 
-        <br clear="all" />
         <hr />
         <br />
-        <h2 align="left">Pendientes</h2>
+        <h2>Pendientes</h2>
 
-        <table align="left" cellpadding="10">
-            <tr>
-                <td>
-                    <a href="libro.html">
-                        <img src="Recursos/Dracula.jpg" alt="Libro pendiente" width="150" height="200px" />
-                    </a>
-                </td>
-                <td>
-                    <a href="libro.html">
-                        <img
-                            src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
-                            alt="Libro pendiente"
-                            width="150"
-                            height="200px"
-                        />
-                    </a>
-                </td>
-                <td>
-                    <a href="libro.html">
-                        <img src="Recursos/libroIT.jpg" alt="Libro pendiente" width="150" height="200px" />
-                    </a>
-                </td>
-                <td>
-                    <a href="libro.html">
-                        <img src="Recursos/Pet Semetary_.jpg" alt="Libro pendiente" width="150" height="200px" />
-                    </a>
-                </td>
-            </tr>
-        </table>
-        <br clear="all" />
+        <div class="galeria-libros">
+            <div class="libro-item">
+                <a href="libro.html">
+                    <img src="Recursos/Dracula.jpg" alt="Libro pendiente" width="150" height="200px" />
+                </a>
+            </div>
+            <div class="libro-item">
+                <a href="libro.html">
+                    <img
+                        src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
+                        alt="Libro pendiente"
+                        width="150"
+                        height="200px"
+                    />
+                </a>
+            </div>
+            <div class="libro-item">
+                <a href="libro.html">
+                    <img src="Recursos/libroIT.jpg" alt="Libro pendiente" width="150" height="200px" />
+                </a>
+            </div>
+            <div class="libro-item">
+                <a href="libro.html">
+                    <img src="Recursos/Pet Semetary_.jpg" alt="Libro pendiente" width="150" height="200px" />
+                </a>
+            </div>
+        </div>
         <hr />
         <footer>
             <h4>Contacto</h4>

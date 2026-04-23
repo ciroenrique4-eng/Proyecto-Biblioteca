@@ -8,64 +8,45 @@
     </head>
     <body>
         <header>
-            <table>
-                <tr>
-                    <td>
-                        <h2><a href="index.html">AZUU</a></h2>
-                    </td>
-                    <td>
-                        <p><a href="explorar.html">Explorar</a></p>
-                    </td>
-                    <td>
-                        <p><a href="mi_lista.html">Mi Lista</a></p>
-                    </td>
-                    <td>
-                        <p><a href="crear_cuenta.html">Registro</a></p>
-                    </td>
-                    <td>
-                        <p><a href="login.html">Iniciar Sesión</a></p>
-                    </td>
-                    <td>
-                        <form><input type="search" placeholder="Buscar Libros..." /></form>
-                    </td>
-                </tr>
-            </table>
+            <nav class="navbar">
+                <div class="nav-item nav-brand">
+                    <h2><a href="index.html">AZUU</a></h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="explorar.html">Explorar</a></li>
+                    <li class="nav-item"><a href="mi_lista.html">Mi Lista</a></li>
+                    <li class="nav-item"><a href="crear_cuenta.html">Registro</a></li>
+                    <li class="nav-item"><a href="login.html">Iniciar Sesión</a></li>
+                </ul>
+                <div class="nav-search">
+                    <form><input type="search" placeholder="Buscar Libros..." /></form>
+                </div>
+            </nav>
         </header>
 
         <hr />
         <br />
 
-        <table cellpadding="15" align="center" width="80%">
-            <tr>
-                <td width="30%" align="center" valign="top">
-                    <img src="Recursos/Dracula.jpg" alt="Portada del libro" width="200" height="300" />
-                </td>
-                <td width="70%" valign="top">
-                    <h1>No busques el doble sentido</h1>
-                    <table cellpadding="5">
-                        <tr>
-                            <td><strong>Autor:</strong></td>
-                            <td>Marcelo M. Gimenez</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Editorial:</strong></td>
-                            <td>El mundo</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Año de publicación:</strong></td>
-                            <td>2026</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ISBN:</strong></td>
-                            <td>123-4567890123</td>
-                        </tr>
-                    </table>
-                    <br />
-                    <h3>Descripción:</h3>
-                    <p>Aquí va una breve sinopsis o descripción del libro seleccionado.</p>
-                </td>
-            </tr>
-        </table>
+        <div class="libro-detalle">
+            <div class="libro-portada">
+                <img src="Recursos/Dracula.jpg" alt="Portada del libro" width="200" height="300" />
+            </div>
+            <div class="libro-info">
+                <h1>No busques el doble sentido</h1>
+                <dl class="libro-metadata">
+                    <dt>Autor:</dt>
+                    <dd>Marcelo M. Gimenez</dd>
+                    <dt>Editorial:</dt>
+                    <dd>El mundo</dd>
+                    <dt>Año de publicación:</dt>
+                    <dd>2026</dd>
+                    <dt>ISBN:</dt>
+                    <dd>123-4567890123</dd>
+                </dl>
+                <h3>Descripción:</h3>
+                <p>Aquí va una breve sinopsis o descripción del libro seleccionado.</p>
+            </div>
+        </div>
 
         <hr />
         <footer>
