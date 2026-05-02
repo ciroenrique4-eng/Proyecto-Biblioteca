@@ -1,217 +1,307 @@
-<!-- Página principal de la biblioteca, hecha por Ciro Rivera -->
-<!doctype html>
+<!DOCTYPE html>
+<!--Tapia Ortiz Gustavo-->
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Biblioteca</title>
-        <style>
-            img.debajo {
-                position: absolute;
-                left: 0px;
-                top: 100px;
-                z-index: -1;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZUU</title>
+    <link rel="stylesheet" href="styles/estilo1.css">
+    <style>
+        .hero {
+            min-height: 560px;
+            padding: 70px 70px 60px;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            align-items: center;
+            gap: 40px;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("Recursos/3.png");
+            background-size: cover;
+            background-position: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .columna-texto {
+            max-width: 260px;
+        }
+
+        .columna-texto h3 {
+            color: #d9b3ff;
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+
+        .columna-texto p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .centro {
+            text-align: center;
+        }
+
+        .centro h1 {
+            font-size: 76px;
+            margin-bottom: 18px;
+        }
+
+        .centro p {
+            font-size: 18px;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #d9b3ff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .boton:hover {
+            background-color: #b894e0;
+        }
+
+        .contenido {
+            padding: 28px 70px 50px;
+        }
+
+        .contenido h2 {
+            font-size: 54px;
+            margin-bottom: 28px;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+        }
+
+        .ver-mas {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            color: #d9b3ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .ver-mas:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            div.banner {
-                color: white;
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav class="navbar">
-                <div class="nav-item nav-brand">
-                    <h2><a href="index.html">AZUU</a></h2>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="explorar.html">Explorar</a></li>
-                    <li class="nav-item"><a href="mi_lista.html">Mi Lista</a></li>
-                    <li class="nav-item"><a href="crear_cuenta.html">Registro</a></li>
-                    <li class="nav-item"><a href="login.html">Iniciar Sesión</a></li>
-                </ul>
-                <div class="nav-search">
-                    <form><input type="search" placeholder="Buscar Libros..." /></form>
-                </div>
-            </nav>
-        </header>
+        }
 
-        <!--Contenido principal-->
-        <br />
-        <div class="banner">
-            <h3 id="titulo" align="left">Sinopsis del libro</h3>
-            <p align="left">
-                "Wiri wiri, aqui va a ir dinamicamente la sinopsis del libro, pero por ahora es un texto de relleno para
-                mostrar como se verá el sitio web."
+        @media (max-width: 1100px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .columna-texto {
+                max-width: 100%;
+            }
+
+            .galeria {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .centro h1 {
+                font-size: 46px;
+            }
+
+            .contenido {
+                padding: 28px 20px 40px;
+            }
+
+            .contenido h2 {
+                font-size: 38px;
+            }
+
+            .galeria {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="barra">
+        <div class="logo">AZUU</div>
+
+        <nav class="menu">
+            <a href="explorar.html">Explorar</a>
+            <a href="explorar.html">Categorias</a>
+            <a href="mi_lista.html">Mi lista</a>
+        </nav>
+
+        <div class="buscador">
+            <input type="text" placeholder="Buscar libros...">
+            <a href="login.html" class="perfil">
+                <img src="Recursos/1.png" alt="Perfil">
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="columna-texto">
+            <h3>SINOPSIS</h3>
+            <p>
+                Cuenta la historia de dos hermanas que se mudan al campo y descubren
+                espiritus del bosque, entre ellos el enorme y silencioso Totoro.
             </p>
+        </div>
 
-            <br />
-            <img
-                class="debajo"
-                src="Recursos/Imagen.png"
-                alt="Portada del libro"
-                align="center"
-                width="100%"
-                height="300px"
-            />
-            <h1 align="center">"Libro más popular"</h1>
+        <div class="centro">
+            <h1>Mi Vecino Totoro</h1>
+            <p>Hayao Miyazaki - 1984</p>
+            <a href="libro.html" class="boton">Leer ahora</a>
+        </div>
 
-            <h3 align="right">¿Por qué leerlo?</h3>
-            <p align="right">
-                "Aqui va a ir dinamicamente la razón por la cual uno debería leer este libro, pero por ahora es un texto
-                de relleno para mostrar como se verá el sitio web."
+        <div class="columna-texto">
+            <h3>POR QUE LEERLA?</h3>
+            <p>
+                Porque te recuerda algo que probablemente ya olvidaste mientras
+                crecias: la imaginacion no es una tonteria infantil, es una forma
+                de sobrevivir.
             </p>
         </div>
+    </section>
+    <br>
 
-        <!--Seccion de Libros Populares-->
-        <br />
-        <h3>Populares</h3>
-        <div class="galeria-libros">
-            <!--Va a ser muy tedioso tener un html nuevo por cada lirbo, por eso vamos a usar un solo html para todos los libros, 
-            sin embargo, si queremos logrear esto necesitamos de javascript, pero por ahora no lo usaremos, ya que solo nos estamos 
-            centrando en el HTML del sitio web-->
-            <div class="libro-item">
-                <a href="libro.html">
-                    <img src="Recursos/harrypoter.jpg" alt="Portada del libro" width="150" height="200px" />
-                </a>
-            </div>
-            <div class="libro-item">
-                <a href="libro.html">
-                    <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="Portada del libro" width="150" height="200px" />
-                </a>
-            </div>
-            <div class="libro-item">
-                <a href="libro.html">
-                    <img src="Recursos/Dracula.jpg" alt="Portada del libro" width="150" height="200px" />
-                </a>
-            </div>
-            <div class="libro-item">
-                <a href="libro.html">
-                    <img
-                        src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
-                        alt="Portada del libro"
-                        width="150"
-                        height="200px"
-                    />
-                </a>
-            </div>
-        </div>
-        <!--Fin de la sección de Libros Populares-->
-        <br clear="all" />
-        <!--Sección de Libros Por Género-->
-        <hr />
-        <br />
-        <h3 align="center">Explorar por Género</h3>
+    <main class="contenido">
+        <h2>Populares</h2>
 
-        <div class="genero-seccion">
-            <h4>Terror</h4>
-            <div class="galeria-libros">
-                <div class="libro-item">
-                    <a href="libro.html">
-                        <img src="Recursos/libroIT.jpg" alt="Portada del libro" width="150" height="200px" />
-                    </a>
-                </div>
-                <div class="libro-item">
-                    <a href="libro.html">
-                        <img
-                            src="Recursos/Shirley Jackson, Jordan Peele and More_ 15 Terrifying Books to Read This Halloween.jpg"
-                            alt="Portada del libro"
-                            width="150"
-                            height="200px"
-                        />
-                    </a>
-                </div>
-                <div class="libro-item">
-                    <a href="libro.html">
-                        <img src="Recursos/Dracula.jpg" alt="Portada del libro" width="150" height="200px" />
-                    </a>
-                </div>
-                <div class="libro-item">
-                    <a href="libro.html">
-                        <img
-                            src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
-                            alt="Portada del libro"
-                            width="150"
-                            height="200px"
-                        />
-                    </a>
-                </div>
-                <div class="libro-item">
-                    <a href="libro.html">
-                        <img src="Recursos/la maldicion.jpg" alt="Portada del libro" width="150" height="200px" />
-                    </a>
-                </div>
-                <div class="libro-item">
-                    <a href="libro.html">
-                        <img src="Recursos/Pet Semetary_.jpg" alt="Portada del libro" width="150" height="200px" />
-                    </a>
-                </div>
+        <section class="galeria">
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/harrypoter.jpg" alt="Harry Potter">
+                </a>
+                <p>Harry Potter</p>
             </div>
-        </div>
-
-        <div class="genero-seccion">
-            <h4>Fantasía</h4>
-            <div class="galeria-libros">
-                <div class="libro-item">
-                    <a href="libro.html">
-                        <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="Portada del libro" width="150" height="200px" />
-                    </a>
-                </div>
-                <div class="libro-item">
-                    <a href="libro.html">
-                        <img src="Recursos/harrypoter.jpg" alt="Portada del libro" width="150" height="200px" />
-                    </a>
-                </div>
-                <div class="libro-item">
-                    <a href="libro.html">
-                        <img
-                            src="Recursos/A Game of Thrones _ Book 1 of A Song of Ice and Fire.jpg"
-                            alt="Portada del libro"
-                            width="150"
-                            height="200px"
-                        />
-                    </a>
-                </div>
-                <div class="libro-item">
-                    <a href="libro.html">
-                        <img
-                            src="Recursos/The Name of the Wind (The Kingkiller Chronicle).jpg"
-                            alt="Portada del libro"
-                            width="150"
-                            height="200px"
-                        />
-                    </a>
-                </div>
-                <div class="libro-item">
-                    <a href="libro.html">
-                        <img
-                            src="Recursos/The Lion, the Witch and the Wardrobe.jpg"
-                            alt="Portada del libro"
-                            width="150"
-                            height="200px"
-                        />
-                    </a>
-                </div>
-                <div class="libro-item">
-                    <a href="libro.html">
-                        <img
-                            src="Recursos/The Way of Kings - Brian Sanderson.jpg"
-                            alt="Portada del libro"
-                            width="150"
-                            height="200px"
-                        />
-                    </a>
-                </div>
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="El Hobbit">
+                </a>
+                <p>El Hobbit</p>
             </div>
-        </div>
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/Dracula.jpg" alt="Drácula">
+                </a>
+                <p>Drácula</p>
+            </div>
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg" alt="Frankenstein">
+                </a>
+                <p>Frankenstein</p>
+            </div>
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/libroIT.jpg" alt="IT">
+                </a>
+                <p>IT</p>
+            </div>
+        </section>
+        <a href="explorar.html" class="ver-mas">Ver más</a>
 
-        <hr />
-        <footer>
-            <h4>Contacto</h4>
-            <p>Email: <a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></p>
-            <p>Teléfono: +57 300 123 4567</p>
-            <p><a href="contacto.html">Ver más información de contacto</a></p>
-            <hr />
-            <p>&copy; 2026 AZUU Biblioteca Digital. Todos los derechos reservados.</p>
-        </footer>
-    </body>
+        <br>
+
+        <h2>Nuevos lanzamientos</h2>
+
+        <section class="galeria">
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="El Hobbit">
+                </a>
+                <p>El Hobbit</p>
+            </div>
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/Dracula.jpg" alt="Drácula">
+                </a>
+                <p>Drácula</p>
+            </div>
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg" alt="Frankenstein">
+                </a>
+                <p>Frankenstein</p>
+            </div>
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/libroIT.jpg" alt="IT">
+                </a>
+                <p>IT</p>
+            </div>
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/Pet Semetary_.jpg" alt="Pet Sematary">
+                </a>
+                <p>Pet Sematary</p>
+            </div>
+        </section>
+
+        <a href="explorar.html" class="ver-mas">Ver más</a>
+
+        <br>
+
+        <h2>Recomendados</h2>
+
+        <section class="galeria">
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/harrypoter.jpg" alt="Harry Potter">
+                </a>
+                <p>Harry Potter</p>
+            </div>
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="El Hobbit">
+                </a>
+                <p>El Hobbit</p>
+            </div>
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/Dracula.jpg" alt="Drácula">
+                </a>
+                <p>Drácula</p>
+            </div>
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg" alt="Frankenstein">
+                </a>
+                <p>Frankenstein</p>
+            </div>
+            <div class="tarjeta">
+                <a href="libro.html">
+                    <img src="Recursos/libroIT.jpg" alt="IT">
+                </a>
+                <p>IT</p>
+            </div>
+        </section>
+
+        <a href="explorar.html" class="ver-mas">Ver más</a>
+    </main>
+</body>
 </html>
