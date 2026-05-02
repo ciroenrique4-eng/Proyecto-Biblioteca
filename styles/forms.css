@@ -1,0 +1,259 @@
+/* Estilos para los formularios elaborado por Ciro E. Rivera*/
+.contenedor-formulario {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #1b1b1b;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /*este de box-shadow es el que le da una sombra al formulario */
+}
+
+.contenedor-formulario h1 {
+    font-size: 36px;
+    color: #d9b3ff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contenedor-formulario h2 {
+    font-size: 24px;
+    color: #d9b3ff;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.grupo-formulario {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    background-color: #0b0b0b;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #d9b3ff;
+    background-color: #1a1a1a;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    padding: 12px 24px;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: #d9b3ff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /*Transition para dar efecto al pasar el mouse por encima */
+}
+
+button:hover {
+    background-color: #b894e0;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button[type="reset"] {
+    background-color: #444;
+    color: #fff;
+}
+
+button[type="reset"]:hover {
+    background-color: #555;
+}
+
+.enlaces-formulario {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.enlaces-formulario p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.enlaces-formulario a {
+    color: #d9b3ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.enlaces-formulario a:hover {
+    color: #b894e0;
+    text-decoration: underline;
+}
+
+/* Estilos para secciones de contenido */
+.seccion-contenido {
+    padding: 40px 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion-contenido h1 {
+    font-size: 42px;
+    color: #d9b3ff;
+    margin-bottom: 20px;
+}
+
+.seccion-contenido h2 {
+    font-size: 28px;
+    color: #d9b3ff;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.seccion-contenido h3 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.seccion-contenido p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.seccion-contenido ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.seccion-contenido li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Menú de géneros */
+.menu-generos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.menu-generos li {
+    list-style: none;
+    margin: 0;
+    padding: 12px;
+    background-color: #1b1b1b;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.menu-generos li:hover {
+    background-color: #d9b3ff;
+    transform: scale(1.05);
+}
+
+.menu-generos li a {
+    color: #d9b3ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu-generos li:hover a {
+    color: #000;
+}
+
+
+/* Footer */
+footer {
+    background-color: #080808;
+    border-top: 1px solid #222;
+    padding: 30px 70px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+footer h4 {
+    color: #d9b3ff;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #d9b3ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #b894e0;
+    text-decoration: underline;
+}
+
+/* Estilos para galerías de libros */
+.galeria-libros {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.libro-item {
+    background: none;
+}
+
+.libro-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 24px;
+    transition: transform 0.3s ease;
+}
+
+.libro-item a {
+    display: block;
+}
+
+.libro-item:hover img {
+    transform: scale(1.05);
+}

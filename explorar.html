@@ -1,45 +1,40 @@
-<!doctype html>
-<!-- Tapia Ortiz Gustavo -->
+<!DOCTYPE html>
+<!-- HTML hecho por Tapia Ortiz Gustavo y altamente modificado por Ciro E. Rivera -->
+<!--Estilos aplicados por Ciro E. Rivera -->
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Explorar</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar</title>
+    <link rel="stylesheet" href="styles/estilo1.css">
+    <link rel="stylesheet" href="styles/forms.css">
+</head>
+<body>
+    <header class="barra">
+        <div class="logo"><a href="index.html">AZUU</a></div>
+        <nav class="menu">
+            <a href="explorar.html">Explorar</a>
+            <a href="explorar.html">Categorias</a>
+            <a href="mi_lista.html">Mi lista</a>
+        </nav>
+        <div class="buscador">
+            <input type="text" placeholder="Buscar libros...">
+            <a href="login.html" class="perfil">
+                <img src="Recursos/1.png" alt="Perfil">
+            </a>
+        </div>
+    </header>
 
-    <body>
-        <header>
-            <nav class="navbar">
-                <div class="nav-item nav-brand">
-                    <h2><a href="index.html">AZUU</a></h2>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="explorar.html">Explorar</a></li>
-                    <li class="nav-item"><a href="mi_lista.html">Mi Lista</a></li>
-                    <li class="nav-item"><a href="crear_cuenta.html">Registro</a></li>
-                    <li class="nav-item"><a href="login.html">Iniciar Sesión</a></li>
-                </ul>
-                <div class="nav-search">
-                    <form><input type="search" placeholder="Buscar libros..." /></form>
-                </div>
-            </nav>
-        </header>
-
-        <hr />
-
-        <br />
-        <h1 align="center">Explorar la Biblioteca</h1>
-
-        <p align="center">
+    <div class="seccion-contenido">
+        <h1>Explorar la Biblioteca</h1>
+        <p>
             Aquí puedes descubrir libros por género. Explora distintas categorías y encuentra nuevas historias para
             leer.
         </p>
 
-        <br />
-        <!--Menu de generos-->
-        <h2 align="center">Géneros</h2>
+        <h2>Géneros</h2>
 
-        <ul align="center">
+        <ul class="menu-generos">
             <li><a href="#terror">Terror</a></li>
             <li><a href="#fantasia">Fantasía</a></li>
             <li><a href="#misterio">Misterio</a></li>
@@ -587,15 +582,14 @@
                 /></a>
             </div>
         </div>
+    </div>
 
-        <hr />
-        <footer>
-            <h4>Contacto</h4>
-            <p>Email: <a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></p>
-            <p>Teléfono: +57 300 123 4567</p>
-            <p><a href="contacto.html">Ver más información de contacto</a></p>
-            <hr />
-            <p>&copy; 2026 AZUU Biblioteca Digital. Todos los derechos reservados.</p>
-        </footer>
-    </body>
+    <footer>
+        <h4>Contacto</h4>
+        <p>Email: <a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></p>
+        <p>Teléfono: +57 300 123 4567</p>
+        <p><a href="contacto.html">Ver más información de contacto</a></p>
+        <p style="margin-top: 18px;">&copy; 2026 AZUU Biblioteca Digital. Todos los derechos reservados.</p>
+    </footer>
+</body>
 </html>
