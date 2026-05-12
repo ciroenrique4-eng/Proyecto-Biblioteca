@@ -1,0 +1,42 @@
+/* Estilos de la Pagina Libro */
+/* Realizado por Diego Alexander Ramirez Rodriguez*/
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+div {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: auto;
+  padding: 25px;
+}
+h1 {
+  font-size: 24px;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+p strong {
+  color: #3498db;
+}
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+/*Fin del CSS realizados por Diego Alexander Ramirez Rodriguez*/
+/*Aparentemente es una pagina sencilla pero esta cambiara de color, imagen e informacion dependiendo
+del libro que sea, pero esos cambios se veran reflejados al usar JS y PHP algo que veremos despues*/

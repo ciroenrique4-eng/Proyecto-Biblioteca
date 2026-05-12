@@ -1,4 +1,4 @@
-# Biblioteca Digital
+# Biblioteca Digital AZUU
 
 > Sitio web de biblioteca digital desarrollado como proyecto para la materia de **Diseño y Elaboración de Sitios Web**.
 
@@ -6,7 +6,7 @@
 
 ## Descripción
 
-Biblioteca Digital es un sitio web que permite a los usuarios explorar, buscar y acceder a libros y recursos digitales de forma sencilla e intuitiva. El proyecto tiene como objetivo aplicar los fundamentos del diseño y desarrollo web moderno.
+Azuu es un sitio web que permite a los usuarios explorar, buscar y acceder a libros y recursos digitales de forma sencilla e intuitiva. El proyecto tiene como objetivo aplicar los fundamentos del diseño y desarrollo enseñados por la profa florencia
 
 ---
 
@@ -14,6 +14,7 @@ Biblioteca Digital es un sitio web que permite a los usuarios explorar, buscar y
 
 - Diseñar una interfaz web atractiva y fácil de usar.
 - Queremos que se note nuestro progeso el hacer paginas web.
+- Deseamos que los libros sean accesibles para todos!
 
 ---
 
