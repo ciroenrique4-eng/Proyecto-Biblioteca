@@ -1,135 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--HTML hecho por Gustavo Tapia Ortiz-->
 <!--Estilos hechos y aplicados por Gustavo Tapia Ortiz-->
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Lista</title>
-    <link rel="stylesheet" href="styles/estilo1.css">
-    <style>
-        .contenido {
-            padding: 28px 70px 50px;
-        }
-        .contenido h2 {
-            font-size: 38px;
-            margin-bottom: 28px;
-            color: #d9b3ff;
-        }
-        .galeria {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 24px;
-        }
-        .tarjeta {
-            background: none;
-        }
-        .tarjeta img {
-            width: 100%;
-            object-fit: cover;
-            display: block;
-            border-radius: 24px;
-        }
-        .tarjeta p {
-            margin-top: 12px;
-            text-align: center;
-            font-size: 16px;
-        }
-        @media (max-width: 1100px) {
-            .galeria {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        @media (max-width: 700px) {
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mi Lista</title>
+        <link rel="stylesheet" href="styles/estilo1.css" />
+        <style>
             .contenido {
-                padding: 28px 20px 40px;
+                padding: 28px 70px 50px;
             }
             .contenido h2 {
-                font-size: 28px;
+                font-size: 38px;
+                margin-bottom: 28px;
+                color: #d9b3ff;
             }
             .galeria {
-                grid-template-columns: 1fr;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 24px;
             }
-        }
-        footer {
-            margin-top: 40px;
-            padding: 30px 0 0 0;
-            border-top: 1px solid #222;
-            text-align: center;
-        }
-        footer h4 {
-            color: #d9b3ff;
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
-<body>
-    <header class="barra">
-        <div class="logo"><a href="index.html">AZUU</a></div>
-        <nav class="menu">
-            <a href="explorar.html">Explorar</a>
-            <a href="explorar.html">Categorias</a>
-            <a href="resenas.html">Reseñas</a>
-            <a href="mi_lista.html">Mi lista</a>
-        </nav>
-        <div class="buscador">
-            <input type="text" placeholder="Buscar libros...">
-            <a href="login.html" class="perfil">
-                <img src="Recursos/1.png" alt="Perfil">
-            </a>
-        </div>
-    </header>
+            .tarjeta {
+                background: none;
+            }
+            .tarjeta img {
+                width: 100%;
+                object-fit: cover;
+                display: block;
+                border-radius: 24px;
+            }
+            .tarjeta p {
+                margin-top: 12px;
+                text-align: center;
+                font-size: 16px;
+            }
+            @media (max-width: 1100px) {
+                .galeria {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            @media (max-width: 700px) {
+                .contenido {
+                    padding: 28px 20px 40px;
+                }
+                .contenido h2 {
+                    font-size: 28px;
+                }
+                .galeria {
+                    grid-template-columns: 1fr;
+                }
+            }
+            footer {
+                margin-top: 40px;
+                padding: 30px 0 0 0;
+                border-top: 1px solid #222;
+                text-align: center;
+            }
+            footer h4 {
+                color: #d9b3ff;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="barra">
+            <div class="logo"><a href="index.html">AZUU</a></div>
+            <nav class="menu">
+                <a href="explorar.html">Explorar</a>
+                <a href="resenas.html">Reseñas</a>
+                <a href="mi_lista.html">Mi lista</a>
+            </nav>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar libros..." />
+                <a href="login.html" class="perfil">
+                    <img src="Recursos/1.png" alt="Perfil" />
+                </a>
+            </div>
+        </header>
 
-    <div class="contenido">
-        <h2>Leyendo Actualmente</h2>
-        <div class="galeria">
-            <div class="tarjeta">
-                <a href="libro.html">
-                    <img src="Recursos/harrypoter.jpg" alt="Libro actual" />
-                </a>
-                <p>Harry Potter</p>
+        <div class="contenido">
+            <h2>Leyendo Actualmente</h2>
+            <div class="galeria">
+                <div class="tarjeta">
+                    <a href="libro.html">
+                        <img src="Recursos/harrypoter.jpg" alt="Libro actual" />
+                    </a>
+                    <p>Harry Potter</p>
+                </div>
+                <div class="tarjeta">
+                    <a href="libro.html">
+                        <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="Libro actual" />
+                    </a>
+                    <p>El Hobbit</p>
+                </div>
             </div>
-            <div class="tarjeta">
-                <a href="libro.html">
-                    <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="Libro actual" />
-                </a>
-                <p>El Hobbit</p>
+            <h2 style="margin-top: 48px">Pendientes</h2>
+            <div class="galeria">
+                <div class="tarjeta">
+                    <a href="libro.html">
+                        <img src="Recursos/Dracula.jpg" alt="Libro pendiente" />
+                    </a>
+                    <p>Drácula</p>
+                </div>
+                <div class="tarjeta">
+                    <a href="libro.html">
+                        <img
+                            src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
+                            alt="Libro pendiente"
+                        />
+                    </a>
+                    <p>Frankenstein</p>
+                </div>
+                <div class="tarjeta">
+                    <a href="libro.html">
+                        <img src="Recursos/libroIT.jpg" alt="Libro pendiente" />
+                    </a>
+                    <p>IT</p>
+                </div>
+                <div class="tarjeta">
+                    <a href="libro.html">
+                        <img src="Recursos/Pet Semetary_.jpg" alt="Libro pendiente" />
+                    </a>
+                    <p>Pet Sematary</p>
+                </div>
             </div>
         </div>
-        <h2 style="margin-top: 48px;">Pendientes</h2>
-        <div class="galeria">
-            <div class="tarjeta">
-                <a href="libro.html">
-                    <img src="Recursos/Dracula.jpg" alt="Libro pendiente" />
-                </a>
-                <p>Drácula</p>
-            </div>
-            <div class="tarjeta">
-                <a href="libro.html">
-                    <img src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg" alt="Libro pendiente" />
-                </a>
-                <p>Frankenstein</p>
-            </div>
-            <div class="tarjeta">
-                <a href="libro.html">
-                    <img src="Recursos/libroIT.jpg" alt="Libro pendiente" />
-                </a>
-                <p>IT</p>
-            </div>
-            <div class="tarjeta">
-                <a href="libro.html">
-                    <img src="Recursos/Pet Semetary_.jpg" alt="Libro pendiente" />
-                </a>
-                <p>Pet Sematary</p>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <h4>Contacto</h4>
-        <p>Email: <a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></p>
-        <p>Teléfono: +57 300 123 4567</p>
-        <p><a href="contacto.html">Ver más información de contacto</a></p>
-        <p style="margin-top: 18px;">&copy; 2026 AZUU Biblioteca Digital. Todos los derechos reservados.</p>
-    </footer>
-</body>
+        <footer>
+            <h4>Contacto</h4>
+            <p>Email: <a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></p>
+            <p>Teléfono: +57 300 123 4567</p>
+            <p><a href="contacto.html">Ver más información de contacto</a></p>
+            <p style="margin-top: 18px">&copy; 2026 AZUU Biblioteca Digital. Todos los derechos reservados.</p>
+        </footer>
+    </body>
 </html>

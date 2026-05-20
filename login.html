@@ -1,60 +1,59 @@
 <!-- HTML de inicio de sesión por Ciro E. Rivera y Luz Lisanya Castellanos Musitos -->
 <!--Estilos aplicados por Ciro E. Rivera -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="styles/estilo1.css">
-    <link rel="stylesheet" href="styles/forms.css">
-</head>
-<body>
-    <header class="barra">
-        <div class="logo"><a href="index.html">AZUU</a></div>
-        <nav class="menu">
-            <a href="explorar.html">Explorar</a>
-            <a href="explorar.html">Categorias</a>
-            <a href="resenas.html">Reseñas</a>
-            <a href="mi_lista.html">Mi lista</a>
-        </nav>
-        <div class="buscador">
-            <input type="text" placeholder="Buscar libros...">
-            <a href="login.html" class="perfil">
-                <img src="Recursos/1.png" alt="Perfil">
-            </a>
-        </div>
-    </header>
-
-    <div class="contenedor-formulario">
-        <h1>Iniciar Sesión</h1>
-        <form>
-            <div class="grupo-formulario">
-                <label for="usuario">Nombre de Usuario o Correo:</label>
-                <input type="text" id="usuario" name="usuario" required>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Iniciar Sesión</title>
+        <link rel="stylesheet" href="styles/estilo1.css" />
+        <link rel="stylesheet" href="styles/forms.css" />
+    </head>
+    <body>
+        <header class="barra">
+            <div class="logo"><a href="index.html">AZUU</a></div>
+            <nav class="menu">
+                <a href="explorar.html">Explorar</a>
+                <a href="resenas.html">Reseñas</a>
+                <a href="mi_lista.html">Mi lista</a>
+            </nav>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar libros..." />
+                <a href="login.html" class="perfil">
+                    <img src="Recursos/1.png" alt="Perfil" />
+                </a>
             </div>
+        </header>
 
-            <div class="grupo-formulario">
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" required>
+        <div class="contenedor-formulario">
+            <h1>Iniciar Sesión</h1>
+            <form>
+                <div class="grupo-formulario">
+                    <label for="usuario">Nombre de Usuario o Correo:</label>
+                    <input type="text" id="usuario" name="usuario" required />
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required />
+                </div>
+
+                <button type="submit">Iniciar Sesión</button>
+                <button type="reset">Limpiar</button>
+            </form>
+
+            <div class="enlaces-formulario">
+                <p>¿No tienes cuenta? <a href="crear_cuenta.html">Regístrate aquí</a></p>
+                <p><a href="index.html">Volver al inicio</a></p>
             </div>
-
-            <button type="submit">Iniciar Sesión</button>
-            <button type="reset">Limpiar</button>
-        </form>
-
-        <div class="enlaces-formulario">
-            <p>¿No tienes cuenta? <a href="crear_cuenta.html">Regístrate aquí</a></p>
-            <p><a href="index.html">Volver al inicio</a></p>
         </div>
-    </div>
 
-    <footer>
-        <h4>Contacto</h4>
-        <p>Email: <a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></p>
-        <p>Teléfono: +57 300 123 4567</p>
-        <p><a href="contacto.html">Ver más información de contacto</a></p>
-        <p style="margin-top: 18px;">&copy; 2026 AZUU Biblioteca Digital. Todos los derechos reservados.</p>
-    </footer>
-</body>
+        <footer>
+            <h4>Contacto</h4>
+            <p>Email: <a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></p>
+            <p>Teléfono: +57 300 123 4567</p>
+            <p><a href="contacto.html">Ver más información de contacto</a></p>
+            <p style="margin-top: 18px">&copy; 2026 AZUU Biblioteca Digital. Todos los derechos reservados.</p>
+        </footer>
+    </body>
 </html>
