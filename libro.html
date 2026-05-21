@@ -7,28 +7,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Libro</title>
         <link rel="stylesheet" href="./styles/Libro.CSS" />
+        <link rel="stylesheet" href="./styles/estilo1.css" />
     </head>
     <body>
-        <header>
-            <nav class="navbar">
-                <div class="nav-item nav-brand">
-                    <h2><a href="index.html">AZUU</a></h2>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="explorar.html">Explorar</a></li>
-                    <li class="nav-item"><a href="resenas.html">Reseñas</a></li>
-                    <li class="nav-item"><a href="mi_lista.html">Mi Lista</a></li>
-                    <li class="nav-item"><a href="crear_cuenta.html">Registro</a></li>
-                    <li class="nav-item"><a href="login.html">Iniciar Sesión</a></li>
-                </ul>
-                <div class="nav-search">
-                    <form><input type="search" placeholder="Buscar Libros..." /></form>
-                </div>
-            </nav>
-        </header>
+        <header class="barra">
+            <div class="logo"><a href="index.html">AZUU</a></div>
 
-        <hr />
-        <br />
+            <nav class="menu">
+                <a href="explorar.html">Explorar</a>
+                <a href="resenas.html">Reseñas</a>
+                <a href="mi_lista.html">Mi lista</a>
+            </nav>
+
+            <div class="buscador">
+                <input type="text" placeholder="Buscar libros..." />
+                <a href="login.html" class="perfil">
+                    <img src="Recursos/1.png" alt="Perfil" />
+                </a>
+            </div>
+        </header>
 
         <div class="libro-detalle">
             <div class="libro-portada">
@@ -48,17 +45,16 @@
                 </dl>
                 <h3>Descripción:</h3>
                 <p>Aquí va una breve sinopsis o descripción del libro seleccionado.</p>
+                <button class="btn-leer">Leer libro...</button>
             </div>
         </div>
 
-        <hr />
         <footer>
             <h4>Contacto</h4>
             <p>Email: <a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></p>
             <p>Teléfono: +57 300 123 4567</p>
             <p><a href="contacto.html">Ver más información de contacto</a></p>
-            <hr />
-            <p>&copy; 2026 AZUU Biblioteca Digital. Todos los derechos reservados.</p>
+            <p style="margin-top: 18px">&copy; 2026 AZUU Biblioteca Digital. Todos los derechos reservados.</p>
         </footer>
     </body>
 </html>

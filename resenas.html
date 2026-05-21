@@ -1,266 +1,292 @@
-<!DOCTYPE html>
+<!doctype html>
 <!-- Página de reseñas creada para AZUU Biblioteca Digital -->
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reseñas</title>
-    <link rel="stylesheet" href="styles/estilo1.css">
-    <style>
-        .hero {
-            min-height: 360px;
-            padding: 70px 70px 60px;
-            display: grid;
-            place-items: center;
-            text-align: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("Recursos/3.png");
-            background-size: cover;
-            background-position: center;
-            border-radius: 0 0 36px 36px;
-        }
-
-        .hero h1 {
-            font-size: 56px;
-            color: #d9b3ff;
-            margin-bottom: 16px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            line-height: 1.7;
-            max-width: 780px;
-            margin: 0 auto;
-            color: #f2f2f2;
-        }
-
-        .contenido {
-            padding: 28px 70px 50px;
-        }
-
-        .reseñas-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(240px, 1fr));
-            gap: 24px;
-            margin-top: 28px;
-        }
-
-        .review-card {
-            background: #0f0f0f;
-            border: 1px solid #222;
-            border-radius: 24px;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            min-height: 320px;
-            gap: 18px;
-        }
-
-        .review-card h3 {
-            font-size: 22px;
-            color: #d9b3ff;
-        }
-
-        .review-author {
-            color: #b3b3b3;
-            font-size: 14px;
-        }
-
-        .rating {
-            color: #d9b3ff;
-            font-size: 16px;
-        }
-
-        .review-card p {
-            line-height: 1.75;
-            color: #e8e8e8;
-            flex-grow: 1;
-        }
-
-        .formulario-reseña {
-            margin-top: 42px;
-            background: #0f0f0f;
-            border: 1px solid #222;
-            border-radius: 24px;
-            padding: 34px;
-        }
-
-        .formulario-reseña h2 {
-            color: #d9b3ff;
-            margin-bottom: 22px;
-            font-size: 32px;
-        }
-
-        .form-group {
-            display: grid;
-            gap: 10px;
-            margin-bottom: 18px;
-        }
-
-        .form-group label {
-            color: #ffffff;
-            font-weight: bold;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            border: 1px solid #222;
-            border-radius: 14px;
-            background: #121212;
-            color: #ffffff;
-            padding: 14px 16px;
-            outline: none;
-        }
-
-        .form-group textarea {
-            min-height: 140px;
-            resize: vertical;
-        }
-
-        .boton-rosa {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 28px;
-            background-color: #d9b3ff;
-            color: #000;
-            font-weight: bold;
-            border-radius: 14px;
-            transition: filter 0.25s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .boton-rosa:hover {
-            filter: brightness(0.94);
-        }
-
-        @media (max-width: 1100px) {
-            .reseñas-grid {
-                grid-template-columns: repeat(2, minmax(240px, 1fr));
-            }
-        }
-
-        @media (max-width: 700px) {
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reseñas</title>
+        <link rel="stylesheet" href="styles/estilo1.css" />
+        <style>
             .hero {
-                padding: 40px 20px;
-            }
-
-            .contenido {
-                padding: 28px 20px 40px;
+                min-height: 360px;
+                padding: 70px 70px 60px;
+                display: grid;
+                place-items: center;
+                text-align: center;
+                background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("Recursos/3.png");
+                background-size: cover;
+                background-position: center;
+                border-radius: 0 0 36px 36px;
             }
 
             .hero h1 {
-                font-size: 42px;
+                font-size: 56px;
+                color: #d9b3ff;
+                margin-bottom: 16px;
+            }
+
+            .hero p {
+                font-size: 18px;
+                line-height: 1.7;
+                max-width: 780px;
+                margin: 0 auto;
+                color: #f2f2f2;
+            }
+
+            .contenido {
+                padding: 28px 70px 50px;
             }
 
             .reseñas-grid {
-                grid-template-columns: 1fr;
+                display: grid;
+                grid-template-columns: repeat(3, minmax(240px, 1fr));
+                gap: 24px;
+                margin-top: 28px;
             }
-        }
-    </style>
-</head>
-<body>
-    <header class="barra">
-        <div class="logo"><a href="index.html">AZUU</a></div>
-        <nav class="menu">
-            <a href="explorar.html">Explorar</a>
-            <a href="resenas.html">Reseñas</a>
-            <a href="mi_lista.html">Mi lista</a>
-        </nav>
-        <div class="buscador">
-            <input type="text" placeholder="Buscar libros...">
-            <a href="login.html" class="perfil">
-                <img src="Recursos/1.png" alt="Perfil">
-            </a>
-        </div>
-    </header>
 
-    <main class="contenido">
-        <section class="hero">
-            <div class="texto-hero">
-                <h1>Reseñas de Lectores</h1>
-                <p>Descubre opiniones reales y recomendaciones rápidas sobre los mejores libros de la biblioteca AZUU. Encuentra ideas para tu próxima lectura con reseñas de nuestra comunidad.</p>
+            .review-card {
+                background: #0f0f0f;
+                border: 1px solid #222;
+                border-radius: 24px;
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                min-height: 320px;
+                gap: 18px;
+            }
+
+            .review-card h3 {
+                font-size: 22px;
+                color: #d9b3ff;
+            }
+
+            .review-author {
+                color: #b3b3b3;
+                font-size: 14px;
+            }
+
+            .rating {
+                color: #d9b3ff;
+                font-size: 16px;
+            }
+
+            .review-card p {
+                line-height: 1.75;
+                color: #e8e8e8;
+                flex-grow: 1;
+            }
+
+            .formulario-reseña {
+                margin-top: 42px;
+                background: #0f0f0f;
+                border: 1px solid #222;
+                border-radius: 24px;
+                padding: 34px;
+            }
+
+            .formulario-reseña h2 {
+                color: #d9b3ff;
+                margin-bottom: 22px;
+                font-size: 32px;
+            }
+
+            .form-group {
+                display: grid;
+                gap: 10px;
+                margin-bottom: 18px;
+            }
+
+            .form-group label {
+                color: #ffffff;
+                font-weight: bold;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                width: 100%;
+                border: 1px solid #222;
+                border-radius: 14px;
+                background: #121212;
+                color: #ffffff;
+                padding: 14px 16px;
+                outline: none;
+            }
+
+            .form-group textarea {
+                min-height: 140px;
+                resize: vertical;
+            }
+
+            .boton-rosa {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 14px 28px;
+                background-color: #d9b3ff;
+                color: #000;
+                font-weight: bold;
+                border-radius: 14px;
+                transition: filter 0.25s ease;
+                border: none;
+                cursor: pointer;
+            }
+
+            .boton-rosa:hover {
+                filter: brightness(0.94);
+            }
+
+            @media (max-width: 1100px) {
+                .reseñas-grid {
+                    grid-template-columns: repeat(2, minmax(240px, 1fr));
+                }
+            }
+
+            @media (max-width: 700px) {
+                .hero {
+                    padding: 40px 20px;
+                }
+
+                .contenido {
+                    padding: 28px 20px 40px;
+                }
+
+                .hero h1 {
+                    font-size: 42px;
+                }
+
+                .reseñas-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="barra">
+            <div class="logo"><a href="index.html">AZUU</a></div>
+            <nav class="menu">
+                <a href="explorar.html">Explorar</a>
+                <a href="resenas.html">Reseñas</a>
+                <a href="mi_lista.html">Mi lista</a>
+            </nav>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar libros..." />
+                <a href="login.html" class="perfil">
+                    <img src="Recursos/1.png" alt="Perfil" />
+                </a>
             </div>
-        </section>
+        </header>
 
-        <section class="reseñas-grid">
-            <article class="review-card">
-                <h3>Mi Vecino Totoro</h3>
-                <div class="review-author">Por Mariana | Fantasía</div>
-                <div class="rating">★★★★★</div>
-                <p>Una reseña afectuosa que destaca la calidez del viaje familiar, la magia del bosque y el valor de la imaginación. Ideal para quienes buscan una lectura reconfortante.</p>
-            </article>
-            <article class="review-card">
-                <h3>El Hobbit</h3>
-                <div class="review-author">Por Alejandro | Aventura</div>
-                <div class="rating">★★★★☆</div>
-                <p>Un clásico imprescindible con personajes entrañables y un universo fantástico bien construido. Recomendado para quienes disfrutan de historias épicas con buen humor.</p>
-            </article>
-            <article class="review-card">
-                <h3>Drácula</h3>
-                <div class="review-author">Por Valeria | Terror</div>
-                <div class="rating">★★★★☆</div>
-                <p>Una reseña que resalta el suspenso y la atmósfera gótica, así como los personajes complejos. Perfecta para lectores que quieren un terror elegante y bien narrado.</p>
-            </article>
-            <article class="review-card">
-                <h3>IT</h3>
-                <div class="review-author">Por Camilo | Horror</div>
-                <div class="rating">★★★★☆</div>
-                <p>La opinión subraya la mezcla de nostalgia con miedo puro y personajes memorables. Ideal para los que buscan un reto literario intenso y envolvente.</p>
-            </article>
-            <article class="review-card">
-                <h3>Frankenstein</h3>
-                <div class="review-author">Por Daniela | Ciencia Ficción</div>
-                <div class="rating">★★★★☆</div>
-                <p>Una lectura profunda sobre la ambición humana y la creación. Recomendado para quienes valoran historias clásicas con una carga filosófica fuerte.</p>
-            </article>
-            <article class="review-card">
-                <h3>Pet Sematary</h3>
-                <div class="review-author">Por Javier | Suspenso</div>
-                <div class="rating">★★★☆☆</div>
-                <p>Un relato sombrío y perturbador que deja una sensación persistente. Ideal para lectores curiosos por explorar el lado más oscuro de Stephen King.</p>
-            </article>
-        </section>
+        <main class="contenido">
+            <section class="hero">
+                <div class="texto-hero">
+                    <h1>Reseñas de Lectores</h1>
+                    <p>
+                        Descubre opiniones reales y recomendaciones rápidas sobre los mejores libros de la biblioteca
+                        AZUU. Encuentra ideas para tu próxima lectura con reseñas de nuestra comunidad.
+                    </p>
+                </div>
+            </section>
 
-        <section class="formulario-reseña">
-            <h2>Escribe tu reseña</h2>
-            <form>
-                <div class="form-group">
-                    <label for="titulo">Título del libro</label>
-                    <input type="text" id="titulo" name="titulo" placeholder="Ej. El Hobbit" required>
-                </div>
-                <div class="form-group">
-                    <label for="autor">Autor</label>
-                    <input type="text" id="autor" name="autor" placeholder="Ej. J.R.R. Tolkien" required>
-                </div>
-                <div class="form-group">
-                    <label for="calificacion">Calificación</label>
-                    <select id="calificacion" name="calificacion" required>
-                        <option value="">Selecciona una calificación</option>
-                        <option value="5">★★★★★</option>
-                        <option value="4">★★★★☆</option>
-                        <option value="3">★★★☆☆</option>
-                        <option value="2">★★☆☆☆</option>
-                        <option value="1">★☆☆☆☆</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="texto">Tu reseña</label>
-                    <textarea id="texto" name="texto" placeholder="Escribe tu opinión sobre el libro" required></textarea>
-                </div>
-                <button type="submit" class="boton-rosa">Publicar reseña</button>
-            </form>
-        </section>
-    </main>
+            <section class="reseñas-grid">
+                <article class="review-card">
+                    <h3>Mi Vecino Totoro</h3>
+                    <div class="review-author">Por Mariana | Fantasía</div>
+                    <div class="rating">★★★★★</div>
+                    <p>
+                        Una reseña afectuosa que destaca la calidez del viaje familiar, la magia del bosque y el valor
+                        de la imaginación. Ideal para quienes buscan una lectura reconfortante.
+                    </p>
+                </article>
+                <article class="review-card">
+                    <h3>El Hobbit</h3>
+                    <div class="review-author">Por Alejandro | Aventura</div>
+                    <div class="rating">★★★★☆</div>
+                    <p>
+                        Un clásico imprescindible con personajes entrañables y un universo fantástico bien construido.
+                        Recomendado para quienes disfrutan de historias épicas con buen humor.
+                    </p>
+                </article>
+                <article class="review-card">
+                    <h3>Drácula</h3>
+                    <div class="review-author">Por Valeria | Terror</div>
+                    <div class="rating">★★★★☆</div>
+                    <p>
+                        Una reseña que resalta el suspenso y la atmósfera gótica, así como los personajes complejos.
+                        Perfecta para lectores que quieren un terror elegante y bien narrado.
+                    </p>
+                </article>
+                <article class="review-card">
+                    <h3>IT</h3>
+                    <div class="review-author">Por Camilo | Horror</div>
+                    <div class="rating">★★★★☆</div>
+                    <p>
+                        La opinión subraya la mezcla de nostalgia con miedo puro y personajes memorables. Ideal para los
+                        que buscan un reto literario intenso y envolvente.
+                    </p>
+                </article>
+                <article class="review-card">
+                    <h3>Frankenstein</h3>
+                    <div class="review-author">Por Daniela | Ciencia Ficción</div>
+                    <div class="rating">★★★★☆</div>
+                    <p>
+                        Una lectura profunda sobre la ambición humana y la creación. Recomendado para quienes valoran
+                        historias clásicas con una carga filosófica fuerte.
+                    </p>
+                </article>
+                <article class="review-card">
+                    <h3>Pet Sematary</h3>
+                    <div class="review-author">Por Javier | Suspenso</div>
+                    <div class="rating">★★★☆☆</div>
+                    <p>
+                        Un relato sombrío y perturbador que deja una sensación persistente. Ideal para lectores curiosos
+                        por explorar el lado más oscuro de Stephen King.
+                    </p>
+                </article>
+            </section>
 
-    <footer>
-        <h4>Contacto</h4>
-        <p>Email: <a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></p>
-        <p>Teléfono: +57 300 123 4567</p>
-        <p><a href="contacto.html">Ver más información de contacto</a></p>
-        <p style="margin-top: 18px;">&copy; 2026 AZUU Biblioteca Digital. Todos los derechos reservados.</p>
-    </footer>
-</body>
+            <section class="formulario-reseña">
+                <h2>Escribe tu reseña</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="titulo">Título del libro</label>
+                        <input type="text" id="titulo" name="titulo" placeholder="Ej. El Hobbit" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="autor">Autor</label>
+                        <input type="text" id="autor" name="autor" placeholder="Ej. J.R.R. Tolkien" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="calificacion">Calificación</label>
+                        <select id="calificacion" name="calificacion" required>
+                            <option value="">Selecciona una calificación</option>
+                            <option value="5">★★★★★</option>
+                            <option value="4">★★★★☆</option>
+                            <option value="3">★★★☆☆</option>
+                            <option value="2">★★☆☆☆</option>
+                            <option value="1">★☆☆☆☆</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="texto">Tu reseña</label>
+                        <textarea
+                            id="texto"
+                            name="texto"
+                            placeholder="Escribe tu opinión sobre el libro"
+                            required
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="boton-rosa">Publicar reseña</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <h4>Contacto</h4>
+            <p>Email: <a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></p>
+            <p>Teléfono: +57 300 123 4567</p>
+            <p><a href="contacto.html">Ver más información de contacto</a></p>
+            <p style="margin-top: 18px">&copy; 2026 AZUU Biblioteca Digital. Todos los derechos reservados.</p>
+        </footer>
+    </body>
 </html>
