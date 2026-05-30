@@ -74,12 +74,6 @@
                 margin-bottom: 28px;
             }
 
-            .galeria {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                gap: 24px;
-            }
-
             .ver-mas {
                 display: block;
                 text-align: center;
@@ -114,10 +108,6 @@
                 .columna-texto {
                     max-width: 100%;
                 }
-
-                .galeria {
-                    grid-template-columns: repeat(3, 1fr);
-                }
             }
 
             @media (max-width: 700px) {
@@ -136,10 +126,6 @@
                 .contenido h2 {
                     font-size: 38px;
                 }
-
-                .galeria {
-                    grid-template-columns: 1fr;
-                }
             }
         </style>
     </head>
@@ -155,6 +141,9 @@
             </nav>
 
             <div class="buscador">
+                <button type="button" class="lupa" aria-label="Buscar" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
+                </button>
                 <input type="text" placeholder="Buscar libros..." />
                 <a href="login.html" class="perfil">
                     <img src="Recursos/1.png" alt="Perfil" />
@@ -324,5 +313,6 @@
                 <a href="https://github.com/ciroenrique4-eng/Proyecto-Biblioteca" target="_blank">código fuente</a>.
             </p>
         </footer>
+        <script src="/js/header.js" defer></script>
     </body>
 </html>

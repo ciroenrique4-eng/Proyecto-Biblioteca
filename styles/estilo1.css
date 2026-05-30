@@ -58,12 +58,35 @@ a {
 
 .buscador input {
     width: 180px;
+    max-width: 100%;
     padding: 10px 12px;
     border: none;
     border-radius: 4px;
     background-color: #1b1b1b;
     color: #ffffff;
     outline: none;
+}
+
+/* Botón con la lupa: oculto en escritorio, visible en móvil para desplegar
+   el cuadro de búsqueda (ver js/header.js) */
+.lupa {
+    display: none;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #1b1b1b;
+    color: #ffffff;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.lupa svg {
+    width: 22px;
+    height: 22px;
+    fill: #ffffff;
 }
 
 .perfil img {
@@ -73,11 +96,22 @@ a {
     object-fit: cover;
 }
 
+/* Galería reutilizable: se adapta sola al ancho disponible (responsive) */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 24px;
+}
+
 .tarjeta img {
     width: 100%;
-    height: 350px;
+    /* aspect-ratio 2/3 = proporción estándar de portadas; con object-fit:cover
+       todas quedan uniformes sin deformarse */
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
     display: block;
     border-radius: 24px;
+    transition: transform 0.3s ease; /* la transición va en el estado base para que aplique al entrar y al salir */
 }
 
 .tarjeta p {
@@ -86,9 +120,8 @@ a {
     font-size: 16px;
 }
 
-.tarjeta:hover {
+.tarjeta:hover img {
     transform: scale(1.05); /*esto hace un efecto de zoom suave al pasar el mouse por encima*/
-    transition: transform 0.3s ease; /*esto define la duración y la suavidad de la transición del efecto de zoom*/
 }
 
 .menu a:hover {
@@ -101,18 +134,56 @@ a {
     transition: transform 0.3s ease;
 }
 
-@media (max-width: 700px) {
+/* En pantallas pequeñas el menú deja de estar centrado en absoluto: así el logo
+   y el menú quedan en la misma línea y el cuadro de búsqueda se oculta tras la
+   lupa, que lo despliega en una fila completa al pulsarla (ver js/header.js) */
+@media (max-width: 900px) {
     .barra {
-        padding: 18px 20px;
-        flex-direction: column;
-        align-items: stretch;
+        padding: 14px 20px;
+        flex-wrap: wrap;
+        gap: 12px 16px;
+    }
+
+    .logo {
+        font-size: 24px;
     }
 
     .menu {
         position: static;
         transform: none;
-        justify-content: center;
+        order: 2;
+        flex: 1;
+        justify-content: flex-end;
         flex-wrap: wrap;
+        gap: 10px 16px;
+        font-size: 14px;
+    }
+
+    .buscador {
+        order: 3;
+        gap: 10px;
+    }
+
+    /* Aparece la lupa en lugar del cuadro de búsqueda */
+    .lupa {
+        display: inline-flex;
+    }
+
+    /* El input se oculta hasta pulsar la lupa */
+    .buscador input {
+        display: none;
+        width: 100%;
+    }
+
+    /* Al activar la búsqueda, el cuadro ocupa una fila completa debajo */
+    .barra.busqueda-activa .buscador {
+        order: 4;
+        flex-basis: 100%;
+    }
+
+    .barra.busqueda-activa .buscador input {
+        display: block;
+        flex: 1;
     }
 }
 /*fin de los de estilos hechos por Tapia Ortiz Gustavo */

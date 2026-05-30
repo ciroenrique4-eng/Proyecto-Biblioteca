@@ -16,39 +16,12 @@
                 margin-bottom: 28px;
                 color: #d9b3ff;
             }
-            .galeria {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                gap: 24px;
-            }
-            .tarjeta {
-                background: none;
-            }
-            .tarjeta img {
-                width: 100%;
-                object-fit: cover;
-                display: block;
-                border-radius: 24px;
-            }
-            .tarjeta p {
-                margin-top: 12px;
-                text-align: center;
-                font-size: 16px;
-            }
-            @media (max-width: 1100px) {
-                .galeria {
-                    grid-template-columns: repeat(3, 1fr);
-                }
-            }
             @media (max-width: 700px) {
                 .contenido {
                     padding: 28px 20px 40px;
                 }
                 .contenido h2 {
                     font-size: 28px;
-                }
-                .galeria {
-                    grid-template-columns: 1fr;
                 }
             }
             footer {
@@ -72,6 +45,9 @@
                 <a href="mi_lista.html">Mi lista</a>
             </nav>
             <div class="buscador">
+                <button type="button" class="lupa" aria-label="Buscar" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
+                </button>
                 <input type="text" placeholder="Buscar libros..." />
                 <a href="login.html" class="perfil">
                     <img src="Recursos/1.png" alt="Perfil" />
@@ -138,5 +114,6 @@
                 <a href="https://github.com/ciroenrique4-eng/Proyecto-Biblioteca" target="_blank">código fuente</a>.
             </p>
         </footer>
+        <script src="/js/header.js" defer></script>
     </body>
 </html>

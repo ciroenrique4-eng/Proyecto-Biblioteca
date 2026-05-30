@@ -20,7 +20,10 @@
 
 .libro-portada img {
   display: block;
-  max-width: 200px;
+  width: 200px;
+  max-width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
@@ -90,4 +93,20 @@
 
 .btn-leer:active {
   transform: scale(0.98);
+}
+
+/* En móvil la portada y la información se apilan en vertical */
+@media (max-width: 700px) {
+  .libro-detalle {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 24px 16px;
+    padding: 28px 22px;
+    gap: 24px;
+  }
+
+  .libro-metadata {
+    text-align: left;
+  }
 }
