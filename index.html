@@ -5,8 +5,55 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>AZUU</title>
+
+        <!-- SEO: descripción y datos para buscadores como Google -->
+        <meta
+            name="description"
+            content="Biblioteca Digital AZUU: explora, lee y descarga miles de libros gratis en línea. Clásicos y novedades de fantasía, terror y mucho más, a un solo clic."
+        />
+        <meta name="keywords" content="biblioteca digital, libros gratis, leer en línea, descargar libros, ebooks, AZUU" />
+        <meta name="author" content="Ciro Rivera, Gustavo Tapia Ortiz, Luz Lisanya Castellanos Musito, Diego Alexander Ramirez Rodriguez" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#0b0b0b" />
+        <title>AZUU — Biblioteca Digital | Lee y descarga libros gratis en línea</title>
+
+        <!-- Cambia "https://azuu.uk" por la URL real cuando publiques el sitio -->
+        <link rel="canonical" href="https://azuu.uk/index.html" />
+        <link rel="icon" type="image/png" href="/Recursos/1.png" />
+
+        <!-- Open Graph: vista previa al compartir en redes sociales -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Biblioteca Digital AZUU" />
+        <meta property="og:locale" content="es_ES" />
+        <meta property="og:title" content="AZUU — Biblioteca Digital | Lee libros gratis en línea" />
+        <meta property="og:description" content="Explora, lee y descarga miles de libros gratis en línea en la Biblioteca Digital AZUU." />
+        <meta property="og:url" content="https://azuu.uk/index.html" />
+        <meta property="og:image" content="https://azuu.uk/Recursos/3.png" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AZUU — Biblioteca Digital | Lee libros gratis en línea" />
+        <meta name="twitter:description" content="Explora, lee y descarga miles de libros gratis en línea en la Biblioteca Digital AZUU." />
+        <meta name="twitter:image" content="https://azuu.uk/Recursos/3.png" />
+
         <link rel="stylesheet" href="/styles/estilo1.css" />
+
+        <!-- Datos estructurados Schema.org: ayuda a Google a entender el sitio -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Biblioteca Digital AZUU",
+                "url": "https://azuu.uk/",
+                "description": "Explora, lee y descarga miles de libros gratis en línea en la Biblioteca Digital AZUU.",
+                "inLanguage": "es",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://azuu.uk/explorar.html?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            }
+        </script>
         <style>
             .hero {
                 min-height: 560px;
