@@ -189,33 +189,133 @@ a {
 /*fin de los de estilos hechos por Tapia Ortiz Gustavo */
 
 
-/* Footer por ciro rivera*/
+/* Footer por ciro rivera */
 footer {
     background-color: #080808;
     border-top: 1px solid #222;
-    padding: 30px 70px;
     margin-top: 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding: 48px 70px 36px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    color: #ffffff;
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: #aaa;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    font-weight: normal;
+}
+
+.footer-licencia {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #d9b3ff;
+    border: 1px solid #d9b3ff;
+    border-radius: 4px;
+    padding: 4px 10px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.footer-licencia:hover {
+    background-color: #d9b3ff;
+    color: #000;
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.footer-col ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #d9b3ff;
+}
+
+.footer-barra {
+    border-top: 1px solid #1e1e1e;
+    padding: 18px 70px;
     text-align: center;
 }
 
-footer h4 {
-    color: #d9b3ff;
-    margin-bottom: 15px;
-    font-size: 18px;
+.footer-barra p {
+    font-size: 12px;
+    color: #555;
+    font-weight: normal;
+    margin: 0;
 }
 
-footer p {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-footer a {
-    color: #d9b3ff;
+.footer-barra a {
+    color: #666;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
-footer a:hover {
-    color: #b894e0;
-    text-decoration: underline;
+.footer-barra a:hover {
+    color: #d9b3ff;
+}
+
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        padding: 36px 28px 24px;
+        gap: 28px;
+    }
+
+    .footer-col:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .footer-barra {
+        padding: 16px 28px;
+    }
+}
+
+@media (max-width: 560px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-col:first-child {
+        grid-column: auto;
+    }
 }

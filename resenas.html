@@ -11,25 +11,28 @@
             content="Lee y comparte reseñas y opiniones de libros en la Biblioteca Digital AZUU. Descubre qué leer según la comunidad."
         />
         <meta name="keywords" content="reseñas de libros, opiniones, valoraciones, recomendaciones, biblioteca AZUU" />
-        <meta name="author" content="Ciro Rivera, Gustavo Tapia Ortiz, Luz Lisanya Castellanos Musito, Diego Alexander Ramirez Rodriguez" />
+        <meta
+            name="author"
+            content="Ciro Rivera, Gustavo Tapia Ortiz, Luz Lisanya Castellanos Musito, Diego Alexander Ramirez Rodriguez"
+        />
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#0b0b0b" />
         <title>Reseñas de libros | Biblioteca Digital AZUU</title>
 
-        <!-- Cambia "https://azuu.uk" por la URL real cuando publiques el sitio -->
         <link rel="canonical" href="https://azuu.uk/resenas.html" />
         <link rel="icon" type="image/png" href="/Recursos/1.png" />
 
-        <!-- Open Graph -->
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Biblioteca Digital AZUU" />
         <meta property="og:locale" content="es_ES" />
         <meta property="og:title" content="Reseñas de libros | Biblioteca Digital AZUU" />
-        <meta property="og:description" content="Lee y comparte reseñas de libros en la Biblioteca Digital AZUU. Descubre qué leer según la comunidad." />
+        <meta
+            property="og:description"
+            content="Lee y comparte reseñas de libros en la Biblioteca Digital AZUU. Descubre qué leer según la comunidad."
+        />
         <meta property="og:url" content="https://azuu.uk/resenas.html" />
         <meta property="og:image" content="https://azuu.uk/Recursos/3.png" />
 
-        <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Reseñas de libros | Biblioteca Digital AZUU" />
         <meta name="twitter:description" content="Lee y comparte reseñas de libros en la Biblioteca Digital AZUU." />
@@ -200,7 +203,11 @@
             </nav>
             <div class="buscador">
                 <button type="button" class="lupa" aria-label="Buscar" aria-expanded="false">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"
+                        />
+                    </svg>
                 </button>
                 <input type="text" placeholder="Buscar libros..." />
                 <a href="login.html" class="perfil">
@@ -314,16 +321,33 @@
         </main>
 
         <footer>
-            <h4>Contacto</h4>
-            <p>Email: <a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></p>
-            <p>Teléfono: +57 300 123 4567</p>
-            <p><a href="contacto.html">Ver más información de contacto</a></p>
-            <p style="margin-top: 18px">
-                &copy; 2026 AZUU Biblioteca Digital. Código abierto bajo licencia GNU AGPLv3.<br />
-                Este es software libre: puedes usarlo, modificarlo y compartirlo bajo la
-                <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU AGPLv3</a>. Mira el
-                <a href="https://github.com/ciroenrique4-eng/Proyecto-Biblioteca" target="_blank">código fuente</a>.
-            </p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <span class="footer-logo">AZUU</span>
+                    <p>Biblioteca digital libre.<br />Explora, lee y descarga sin barreras.</p>
+                    <a class="footer-licencia" href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU AGPLv3</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="/explorar.html">Catálogo</a></li>
+                        <li><a href="/resenas.html">Reseñas</a></li>
+                        <li><a href="/mi_lista.html">Mi lista</a></li>
+                        <li><a href="/contacto.html">Sobre nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></li>
+                        <li>+57 300 123 4567</li>
+                        <li><a href="https://github.com/ciroenrique4-eng/Proyecto-Biblioteca" target="_blank">Código fuente ↗</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-barra">
+                <p>&copy; 2026 AZUU Biblioteca Digital &mdash; Software libre bajo <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU AGPLv3</a>.</p>
+            </div>
         </footer>
         <script src="/js/header.js" defer></script>
     </body>

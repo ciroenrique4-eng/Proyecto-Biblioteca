@@ -1,0 +1,348 @@
+/* Estilos para la página "Sobre nosotros" elaborados por Ciro E. Rivera */
+
+/* Paleta cálida: acento teal/verde suave en lugar del morado del sitio principal */
+:root {
+    --nos-acento: #72bfa8;
+    --nos-acento-claro: #9fd4c5;
+    --nos-acento-oscuro: #4fa090;
+    --nos-fondo-tarjeta: #111916;
+    --nos-borde: #1e2e2a;
+}
+
+/* ── Cabecera de página ── */
+.nos-hero {
+    background: linear-gradient(135deg, #0d1a17 0%, #0f2420 60%, #101510 100%);
+    border-bottom: 1px solid var(--nos-borde);
+    padding: 64px 70px 56px;
+    text-align: center;
+}
+
+.nos-hero h1 {
+    font-size: 54px;
+    color: var(--nos-acento);
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+.nos-hero p {
+    font-size: 18px;
+    color: #b0c8c2;
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.75;
+    font-weight: normal;
+}
+
+/* ── Cuerpo principal ── */
+.nos-cuerpo {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+/* ── Tarjetas de sección ── */
+.nos-seccion {
+    background-color: var(--nos-fondo-tarjeta);
+    border: 1px solid var(--nos-borde);
+    border-radius: 14px;
+    padding: 36px 40px;
+    margin-bottom: 28px;
+}
+
+.nos-seccion h2 {
+    font-size: 22px;
+    color: var(--nos-acento);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nos-seccion h2::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 22px;
+    background-color: var(--nos-acento);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.nos-seccion p {
+    font-size: 15px;
+    color: #b8cfc9;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    font-weight: normal;
+}
+
+.nos-seccion p:last-child {
+    margin-bottom: 0;
+}
+
+.nos-seccion a {
+    color: var(--nos-acento);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.nos-seccion a:hover {
+    color: var(--nos-acento-claro);
+    border-color: var(--nos-acento-claro);
+}
+
+/* ── Badge de licencia ── */
+.nos-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #0d2a22;
+    border: 1px solid var(--nos-acento-oscuro);
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 14px;
+    color: var(--nos-acento);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.nos-badge:hover {
+    background-color: #143d2f;
+    color: var(--nos-acento-claro);
+    border-color: var(--nos-acento-claro);
+}
+
+/* ── Grid de valores ── */
+.nos-valores {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.nos-valor {
+    background-color: #0f211c;
+    border: 1px solid var(--nos-borde);
+    border-radius: 10px;
+    padding: 22px 20px;
+}
+
+.nos-valor .nos-icono {
+    font-size: 26px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.nos-valor h3 {
+    font-size: 15px;
+    color: var(--nos-acento);
+    margin-bottom: 8px;
+}
+
+.nos-valor p {
+    font-size: 13px;
+    color: #8aada7;
+    line-height: 1.65;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* ── Separador ── */
+.nos-divisor {
+    border: none;
+    border-top: 1px solid var(--nos-borde);
+    margin: 12px 0 28px;
+}
+
+/* ── Formulario de contacto adaptado ── */
+.nos-formulario {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 0 40px;
+}
+
+.nos-formulario h2 {
+    font-size: 22px;
+    color: var(--nos-acento);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nos-formulario h2::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 22px;
+    background-color: var(--nos-acento);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.nos-form-inner {
+    background-color: var(--nos-fondo-tarjeta);
+    border: 1px solid var(--nos-borde);
+    border-radius: 14px;
+    padding: 36px 40px;
+}
+
+/* Sobreescribe los colores morados del forms.css solo en esta página */
+.nos-form-inner input[type="text"]:focus,
+.nos-form-inner input[type="email"]:focus,
+.nos-form-inner textarea:focus {
+    border-color: var(--nos-acento);
+}
+
+.nos-form-inner button[type="submit"] {
+    background-color: var(--nos-acento);
+    color: #000;
+}
+
+.nos-form-inner button[type="submit"]:hover {
+    background-color: var(--nos-acento-claro);
+}
+
+/* ── Layout de dos columnas: contenido + panel de equipo ── */
+.nos-contenedor {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    gap: 28px;
+    align-items: flex-start;
+}
+
+.nos-contenedor .nos-cuerpo {
+    flex: 1;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Panel lateral: equipo desarrollador ── */
+.nos-equipo {
+    width: 260px;
+    flex-shrink: 0;
+    background-color: var(--nos-fondo-tarjeta);
+    border: 1px solid var(--nos-borde);
+    border-radius: 14px;
+    padding: 28px 24px;
+    position: sticky;
+    top: 80px;
+}
+
+.nos-equipo h2 {
+    font-size: 16px;
+    color: var(--nos-acento);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--nos-borde);
+}
+
+.nos-devs {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.nos-dev {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 14px 16px;
+    background-color: #0f211c;
+    border: 1px solid var(--nos-borde);
+    border-radius: 10px;
+    transition: border-color 0.2s ease;
+}
+
+.nos-dev:hover {
+    border-color: var(--nos-acento-oscuro);
+}
+
+.nos-dev-nombre {
+    font-size: 14px;
+    font-weight: bold;
+    color: #e0f0ec;
+}
+
+.nos-dev-inicial {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--nos-acento-oscuro);
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+}
+
+.nos-grupo-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--nos-acento);
+    background-color: #0d2a22;
+    border: 1px solid var(--nos-acento-oscuro);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+    .nos-hero {
+        padding: 44px 24px 40px;
+    }
+
+    .nos-hero h1 {
+        font-size: 38px;
+    }
+
+    .nos-cuerpo {
+        padding: 36px 20px;
+    }
+
+    .nos-seccion {
+        padding: 28px 22px;
+    }
+
+    .nos-contenedor {
+        flex-direction: column;
+        padding: 36px 20px;
+    }
+
+    .nos-equipo {
+        width: 100%;
+        position: static;
+    }
+
+    .nos-formulario {
+        padding: 0 20px;
+        margin-bottom: 40px;
+    }
+
+    .nos-form-inner {
+        padding: 28px 22px;
+    }
+
+    .nos-valores {
+        grid-template-columns: 1fr;
+    }
+}

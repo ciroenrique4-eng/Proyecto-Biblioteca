@@ -1,13 +1,6 @@
-# robots.txt - Biblioteca Digital AZUU
-# Indica a los buscadores (Google, Bing, etc.) qué pueden rastrear.
-
 User-agent: *
 Allow: /
-
-# Páginas privadas o de acceso que no aportan a la búsqueda
 Disallow: /login.html
 Disallow: /crear_cuenta.html
 Disallow: /mi_lista.html
-
-# Cambia el dominio por el real cuando publiques el sitio
 Sitemap: https://azuu.uk/sitemap.xml
