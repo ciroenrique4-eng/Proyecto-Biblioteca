@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="theme-color" content="#0b0b0b" />
+        <title>Búsqueda | Biblioteca Digital AZUU</title>
+        <link rel="icon" type="image/png" href="Recursos/1.png" />
+        <link rel="stylesheet" href="styles/estilo1.css" />
+        <link rel="stylesheet" href="styles/forms.css" />
+    </head>
+    <body>
+        <header class="barra">
+            <div class="logo"><a href="index.html">AZUU</a></div>
+            <nav class="menu">
+                <a href="explorar.html">Explorar</a>
+                <a href="resenas.html">Reseñas</a>
+                <a href="mi_lista.html">Mi lista</a>
+            </nav>
+            <div class="buscador">
+                <button type="button" class="lupa" aria-label="Buscar" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z" />
+                    </svg>
+                </button>
+                <input type="text" placeholder="Buscar libros..." />
+                <a href="login.html" class="perfil">
+                    <img src="Recursos/1.png" alt="Perfil" />
+                </a>
+            </div>
+        </header>
+
+        <main class="seccion-contenido">
+            <h1 id="titulo-resultados">Resultados de búsqueda</h1>
+            <p id="subtitulo-resultados"></p>
+            <div id="resultados" class="galeria" style="margin-top: 32px;"></div>
+        </main>
+
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <span class="footer-logo">AZUU</span>
+                    <p>Biblioteca digital libre.<br />Explora, lee y descarga sin barreras.</p>
+                    <a class="footer-licencia" href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU AGPLv3</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="/explorar.html">Catálogo</a></li>
+                        <li><a href="/resenas.html">Reseñas</a></li>
+                        <li><a href="/mi_lista.html">Mi lista</a></li>
+                        <li><a href="/contacto.html">Sobre nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></li>
+                        <li>+57 300 123 4567</li>
+                        <li><a href="https://github.com/ciroenrique4-eng/Proyecto-Biblioteca" target="_blank">Código fuente ↗</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-barra">
+                <p>&copy; 2026 AZUU Biblioteca Digital &mdash; Software libre bajo <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU AGPLv3</a>.</p>
+            </div>
+        </footer>
+
+        <script src="js/header.js" defer></script>
+        <script src="js/Libro.js"></script>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get("q") || "";
+
+            const inputBuscador = document.querySelector(".buscador input");
+            if (inputBuscador) inputBuscador.value = query;
+
+            const tituloEl = document.getElementById("titulo-resultados");
+            const subtituloEl = document.getElementById("subtitulo-resultados");
+            const resultadosEl = document.getElementById("resultados");
+
+            if (!query.trim()) {
+                tituloEl.textContent = "Búsqueda";
+                subtituloEl.textContent = "Escribe el título de un libro en el buscador y presiona Enter.";
+            } else {
+                const termino = query.trim().toLowerCase();
+                const encontrados = libros
+                    .map((libro, id) => ({ libro, id }))
+                    .filter(({ libro }) => libro.titulo.toLowerCase().includes(termino));
+
+                tituloEl.textContent = `Resultados para: "${query}"`;
+
+                if (encontrados.length === 0) {
+                    subtituloEl.textContent = "No se encontraron libros con ese título.";
+                } else {
+                    subtituloEl.textContent =
+                        encontrados.length === 1
+                            ? "1 libro encontrado."
+                            : `${encontrados.length} libros encontrados.`;
+
+                    encontrados.forEach(({ libro, id }) => {
+                        const tarjeta = document.createElement("div");
+                        tarjeta.className = "tarjeta";
+                        tarjeta.innerHTML = `
+                            <a href="libro.html?id=${id}">
+                                <img src="${libro.portada}" alt="${libro.titulo}" />
+                            </a>
+                            <p>${libro.titulo}</p>
+                        `;
+                        resultadosEl.appendChild(tarjeta);
+                    });
+                }
+            }
+        </script>
+    </body>
+</html>

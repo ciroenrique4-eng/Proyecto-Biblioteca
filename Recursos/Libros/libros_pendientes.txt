@@ -1,0 +1,27 @@
+ARCHIVOS EPUB/PDF PENDIENTES POR AGREGAR
+=========================================
+Luz, deberias de colocar cada archivo en la carpeta: Recursos/Libros/
+Luego actualiza la propiedad "archivo" del libro correspondiente en js/Libro.js
+
+ID  | TÍTULO                              | NOMBRE DE ARCHIVO
+----|-------------------------------------|-------------------------------------------
+ 0  | Harry Potter y la piedra filosofal  | harry_potter_piedra_filosofal.epub
+ 1  | El Hobbit                           | el_hobbit.epub
+ 2  | Drácula                             | dracula.epub
+ 3  | Frankenstein                        | frankenstein.epub
+ 4  | IT                                  | it_stephen_king.epub
+ 5  | Pet Sematary                        | pet_sematary.epub
+ 6  | Mi vecino Totoro                    | mi_vecino_totoro.epub
+ 7  | Juego de Tronos                     | juego_de_tronos.epub
+ 8  | El Nombre del Viento                | el_nombre_del_viento.epub
+ 9  | El León, la Bruja y el Ropero       | el_leon_la_bruja_y_el_ropero.epub
+10  | El Camino de los Reyes              | el_camino_de_los_reyes.epub
+11  | La Maldición de Hill House          | la_maldicion_de_hill_house.epub
+12  | La Maldición                        | la_maldicion.epub
+13  | Pro Git                             | progit.epub  ← YA DISPONIBLE ✓
+
+Cuando puedas luz, recuerda que tienes que cambiar el js
+EJEMPLO: Cuando tengas el archivo de Drácula (id=2), en js/Libro.js cambia:
+    archivo: null
+por:
+    archivo: "Recursos/Libros/dracula.epub"
