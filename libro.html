@@ -1,114 +1,53 @@
-<!doctype html>
-<!--Autor: Diego Alexander Ramirez Rodriguez-->
-<!--Estilos aplicados por Diego Alexander Ramirez Rodriguez-->
+<!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libro</title>
+    <link rel="stylesheet" href="styles/estilo1.css">
+    <link rel="stylesheet" href="styles/forms.css">
+    <link rel="stylesheet" href="styles/Libro.css">
 
-        <!-- SEO -->
-        <meta
-            name="description"
-            content="Consulta la ficha del libro en la Biblioteca Digital AZUU: sinopsis, autor y opción de lectura. Lee gratis en línea."
-        />
-        <meta name="keywords" content="ficha de libro, sinopsis, leer libro, autor, biblioteca AZUU" />
-        <meta name="author" content="Ciro Rivera, Gustavo Tapia Ortiz, Luz Lisanya Castellanos Musito, Diego Alexander Ramirez Rodriguez" />
-        <meta name="robots" content="index, follow" />
-        <meta name="theme-color" content="#0b0b0b" />
-        <title>Ficha del libro | Biblioteca Digital AZUU</title>
+</head>
+<body>
+    <header class="barra">
+        <div class="logo"><a href="index.html">AZUU</a></div>
+        <nav class="menu">
+            <a href="explorar.html">Explorar</a>
+            <a href="explorar.html">Categorias</a>
+            <a href="resenas.html">Reseñas</a>
+            <a href="mi_lista.html">Mi lista</a>
+        </nav>
+        <div class="buscador">
+            <input type="text" placeholder="Buscar libros...">
+            <a href="login.html" class="perfil">
+                <img src="Recursos/1.png" alt="Perfil">
+            </a>
+        </div>
+    </header>
 
-        <link rel="canonical" href="https://azuu.uk/libro.html" />
-        <link rel="icon" type="image/png" href="/Recursos/1.png" />
-
-        <!-- Open Graph -->
-        <meta property="og:type" content="book" />
-        <meta property="og:site_name" content="Biblioteca Digital AZUU" />
-        <meta property="og:locale" content="es_ES" />
-        <meta property="og:title" content="Ficha del libro | Biblioteca Digital AZUU" />
-        <meta property="og:description" content="Sinopsis, autor y lectura gratis en línea en la Biblioteca Digital AZUU." />
-        <meta property="og:url" content="https://azuu.uk/libro.html" />
-        <meta property="og:image" content="https://azuu.uk/Recursos/3.png" />
-
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ficha del libro | Biblioteca Digital AZUU" />
-        <meta name="twitter:description" content="Sinopsis, autor y lectura gratis en línea en la Biblioteca Digital AZUU." />
-        <meta name="twitter:image" content="https://azuu.uk/Recursos/3.png" />
-        <link rel="stylesheet" href="/styles/Libro.css" />
-        <link rel="stylesheet" href="/styles/estilo1.css" />
-    </head>
-    <body>
-        <header class="barra">
-            <div class="logo"><a href="index.html">AZUU</a></div>
-
-            <nav class="menu">
-                <a href="explorar.html">Explorar</a>
-                <a href="resenas.html">Reseñas</a>
-                <a href="mi_lista.html">Mi lista</a>
-            </nav>
-
-            <div class="buscador">
-                <button type="button" class="lupa" aria-label="Buscar" aria-expanded="false">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
-                </button>
-                <input type="text" placeholder="Buscar libros..." />
-                <a href="login.html" class="perfil">
-                    <img src="Recursos/1.png" alt="Perfil" />
-                </a>
-            </div>
-        </header>
-
+    <main class="seccion-contenido">
+        <h1 id="titulo"></h1>
         <div class="libro-detalle">
             <div class="libro-portada">
-                <img src="./Recursos/GitBook.png" alt="Portada del libro" width="200" height="300" />
+                <img id="portada" src="" alt="Portada del libro" width="200" height="300" />
             </div>
             <div class="libro-info">
-                <h1>No busques el doble sentido</h1>
-                <dl class="libro-metadata">
-                    <dt>Autor:</dt>
-                    <dd>Marcelo M. Gimenez</dd>
-                    <dt>Editorial:</dt>
-                    <dd>El mundo</dd>
-                    <dt>Año de publicación:</dt>
-                    <dd>2026</dd>
-                    <dt>ISBN:</dt>
-                    <dd>123-4567890123</dd>
-                </dl>
+                <dl class="libro-metadata" id="metadata"></dl>
                 <h3>Descripción:</h3>
-                <p>Aquí va una breve sinopsis o descripción del libro seleccionado.</p>
-                <button class="btn-leer">Leer libro...</button>
+                <p id="descripcion"></p>
             </div>
         </div>
+    </main>
 
-        <footer>
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <span class="footer-logo">AZUU</span>
-                    <p>Biblioteca digital libre.<br />Explora, lee y descarga sin barreras.</p>
-                    <a class="footer-licencia" href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU AGPLv3</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Navegación</h4>
-                    <ul>
-                        <li><a href="/explorar.html">Catálogo</a></li>
-                        <li><a href="/resenas.html">Reseñas</a></li>
-                        <li><a href="/mi_lista.html">Mi lista</a></li>
-                        <li><a href="/contacto.html">Sobre nosotros</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li><a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></li>
-                        <li>+57 300 123 4567</li>
-                        <li><a href="https://github.com/ciroenrique4-eng/Proyecto-Biblioteca" target="_blank">Código fuente ↗</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-barra">
-                <p>&copy; 2026 AZUU Biblioteca Digital &mdash; Software libre bajo <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU AGPLv3</a>.</p>
-            </div>
-        </footer>
-        <script src="/js/header.js" defer></script>
-    </body>
+    <footer>
+        <h4>Contacto</h4>
+        <p>Email: <a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></p>
+        <p>Teléfono: +57 300 123 4567</p>
+        <p><a href="contacto.html">Ver más información de contacto</a></p>
+        <p style="margin-top: 18px;">&copy; 2026 AZUU Biblioteca Digital. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scripts/libros.js"></script>
+</body>
 </html>
