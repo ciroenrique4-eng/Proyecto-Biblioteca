@@ -11,33 +11,43 @@
             name="description"
             content="Biblioteca Digital AZUU: explora, lee y descarga miles de libros gratis en línea. Clásicos y novedades de fantasía, terror y mucho más, a un solo clic."
         />
-        <meta name="keywords" content="biblioteca digital, libros gratis, leer en línea, descargar libros, ebooks, AZUU" />
-        <meta name="author" content="Ciro Rivera, Gustavo Tapia Ortiz, Luz Lisanya Castellanos Musito, Diego Alexander Ramirez Rodriguez" />
+        <meta
+            name="keywords"
+            content="biblioteca digital, libros gratis, leer en línea, descargar libros, ebooks, AZUU"
+        />
+        <meta
+            name="author"
+            content="Ciro Rivera, Gustavo Tapia Ortiz, Luz Lisanya Castellanos Musito, Diego Alexander Ramirez Rodriguez"
+        />
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#0b0b0b" />
         <title>AZUU — Biblioteca Digital | Lee y descarga libros gratis en línea</title>
 
         <link rel="canonical" href="https://azuu.uk/index.html" />
-        <link rel="icon" type="image/png" href="/Recursos/1.png" />
+        <link rel="icon" type="image/png" href="/Recursos/logo.png" />
 
         <!-- Open Graph: vista previa al compartir en redes sociales -->
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Biblioteca Digital AZUU" />
         <meta property="og:locale" content="es_ES" />
         <meta property="og:title" content="AZUU — Biblioteca Digital | Lee libros gratis en línea" />
-        <meta property="og:description" content="Explora, lee y descarga miles de libros gratis en línea en la Biblioteca Digital AZUU." />
+        <meta
+            property="og:description"
+            content="Explora, lee y descarga miles de libros gratis en línea en la Biblioteca Digital AZUU."
+        />
         <meta property="og:url" content="https://azuu.uk/index.html" />
         <meta property="og:image" content="https://azuu.uk/Recursos/3.png" />
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AZUU — Biblioteca Digital | Lee libros gratis en línea" />
-        <meta name="twitter:description" content="Explora, lee y descarga miles de libros gratis en línea en la Biblioteca Digital AZUU." />
+        <meta
+            name="twitter:description"
+            content="Explora, lee y descarga miles de libros gratis en línea en la Biblioteca Digital AZUU."
+        />
         <meta name="twitter:image" content="https://azuu.uk/Recursos/3.png" />
 
         <link rel="stylesheet" href="/styles/estilo1.css" />
-
-        <!-- Datos estructurados Schema.org: ayuda a Google a entender el sitio -->
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -61,10 +71,33 @@
                 grid-template-columns: 1fr 2fr 1fr;
                 align-items: center;
                 gap: 40px;
-                background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("Recursos/3.png");
+                position: relative;
+                overflow: hidden;
+                animation: fadeIn 1s ease-in-out;
+            }
+
+            /* Fondo borroso del hero: separado del contenido para poder aplicar blur sin afectar el texto */
+            #hero-bg {
+                position: absolute;
+                inset: -20px;
                 background-size: cover;
                 background-position: center;
-                animation: fadeIn 1s ease-in-out;
+                filter: blur(8px) brightness(0.45);
+                transform: scale(1.05);
+                transition: background-image 0.4s ease;
+                z-index: 0;
+            }
+
+            /* El contenido del hero queda encima del fondo */
+            .hero > *:not(#hero-bg) {
+                position: relative;
+                z-index: 1;
+            }
+
+            /* Transición de fade al cambiar de banner */
+            .hero.hero-fade > *:not(#hero-bg) {
+                opacity: 0;
+                transition: opacity 0.4s ease;
             }
 
             .columna-texto {
@@ -188,7 +221,11 @@
 
             <div class="buscador">
                 <button type="button" class="lupa" aria-label="Buscar" aria-expanded="false">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"
+                        />
+                    </svg>
                 </button>
                 <input type="text" placeholder="Buscar libros..." />
                 <a href="login.html" class="perfil">
@@ -198,28 +235,21 @@
         </header>
 
         <section class="hero">
+            <div id="hero-bg"></div>
+
             <div class="columna-texto">
                 <h3>SINOPSIS</h3>
-                <p>
-                    Cuenta la historia de dos hermanas que se mudan al campo y descubren espiritus del bosque, entre
-                    ellos el enorme y silencioso Totoro.
-                </p>
+                <p id="hero-sinopsis"></p>
             </div>
 
-<!--id's agregados por Diego Alexander Ramirez Rodriguez para el correcto funcionamiento de mi funcion JS-->
-
             <div class="centro">
-                <h1>Mi Vecino Totoro</h1>
-                <p>Hayao Miyazaki - 1984</p>
-                <a href="libro.html?id=6" class="boton">Leer ahora</a>
+                <h1 id="hero-titulo"></h1>
+                <a id="hero-boton" href="#" class="boton">Leer ahora</a>
             </div>
 
             <div class="columna-texto">
-                <h3>POR QUE LEERLA?</h3>
-                <p>
-                    Porque te recuerda algo que probablemente ya olvidaste mientras crecias: la imaginacion no es una
-                    tonteria infantil, es una forma de sobrevivir.
-                </p>
+                <h3>¿POR QUÉ LEERLA?</h3>
+                <p id="hero-porque"></p>
             </div>
         </section>
         <br />
@@ -354,7 +384,9 @@
                 <div class="footer-col">
                     <span class="footer-logo">AZUU</span>
                     <p>Biblioteca digital libre.<br />Explora, lee y descarga sin barreras.</p>
-                    <a class="footer-licencia" href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU AGPLv3</a>
+                    <a class="footer-licencia" href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank"
+                        >GNU AGPLv3</a
+                    >
                 </div>
                 <div class="footer-col">
                     <h4>Navegación</h4>
@@ -370,14 +402,22 @@
                     <ul>
                         <li><a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></li>
                         <li>+57 300 123 4567</li>
-                        <li><a href="https://github.com/ciroenrique4-eng/Proyecto-Biblioteca" target="_blank">Código fuente ↗</a></li>
+                        <li>
+                            <a href="https://github.com/ciroenrique4-eng/Proyecto-Biblioteca" target="_blank"
+                                >Código fuente ↗</a
+                            >
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="footer-barra">
-                <p>&copy; 2026 AZUU Biblioteca Digital &mdash; Software libre bajo <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU AGPLv3</a>.</p>
+                <p>
+                    &copy; 2026 AZUU Biblioteca Digital &mdash; Software libre bajo
+                    <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU AGPLv3</a>.
+                </p>
             </div>
         </footer>
         <script src="/js/header.js" defer></script>
+        <script src="js/banner.js"></script>
     </body>
 </html>

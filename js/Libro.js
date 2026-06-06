@@ -71,7 +71,7 @@ const libros = [
         editorial: "Tokuma Shoten",
         anio: 1988,
         isbn: "978-4198616774",
-        portada: "Recursos/3.png",
+        portada: "Recursos/totoro.webp",
         descripcion: "Un cuento mágico sobre dos hermanas que descubren criaturas fantásticas en el campo japonés.",
         archivo: null,
     },

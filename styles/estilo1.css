@@ -94,6 +94,7 @@ a {
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    filter: invert(1);
 }
 
 /* Galería reutilizable: se adapta sola al ancho disponible (responsive) */
