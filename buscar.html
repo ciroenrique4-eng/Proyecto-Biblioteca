@@ -1,4 +1,6 @@
 <!doctype html>
+<!--HTML POR LUZ LIZANIA CASTELLANOS MUSITO-->
+<!--Java script escrito por Ciro E. Rivera y gustavo tapia-->
 <html lang="es">
     <head>
         <meta charset="UTF-8" />
@@ -21,7 +23,9 @@
             <div class="buscador">
                 <button type="button" class="lupa" aria-label="Buscar" aria-expanded="false">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z" />
+                        <path
+                            d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"
+                        />
                     </svg>
                 </button>
                 <input type="text" placeholder="Buscar libros..." />
@@ -34,7 +38,7 @@
         <main class="seccion-contenido">
             <h1 id="titulo-resultados">Resultados de búsqueda</h1>
             <p id="subtitulo-resultados"></p>
-            <div id="resultados" class="galeria" style="margin-top: 32px;"></div>
+            <div id="resultados" class="galeria" style="margin-top: 32px"></div>
         </main>
 
         <footer>
@@ -42,7 +46,9 @@
                 <div class="footer-col">
                     <span class="footer-logo">AZUU</span>
                     <p>Biblioteca digital libre.<br />Explora, lee y descarga sin barreras.</p>
-                    <a class="footer-licencia" href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU AGPLv3</a>
+                    <a class="footer-licencia" href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank"
+                        >GNU AGPLv3</a
+                    >
                 </div>
                 <div class="footer-col">
                     <h4>Navegación</h4>
@@ -58,12 +64,19 @@
                     <ul>
                         <li><a href="mailto:biblioteca@azuu.com">biblioteca@azuu.com</a></li>
                         <li>+57 300 123 4567</li>
-                        <li><a href="https://github.com/ciroenrique4-eng/Proyecto-Biblioteca" target="_blank">Código fuente ↗</a></li>
+                        <li>
+                            <a href="https://github.com/ciroenrique4-eng/Proyecto-Biblioteca" target="_blank"
+                                >Código fuente ↗</a
+                            >
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="footer-barra">
-                <p>&copy; 2026 AZUU Biblioteca Digital &mdash; Software libre bajo <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU AGPLv3</a>.</p>
+                <p>
+                    &copy; 2026 AZUU Biblioteca Digital &mdash; Software libre bajo
+                    <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU AGPLv3</a>.
+                </p>
             </div>
         </footer>
 
@@ -95,9 +108,7 @@
                     subtituloEl.textContent = "No se encontraron libros con ese título.";
                 } else {
                     subtituloEl.textContent =
-                        encontrados.length === 1
-                            ? "1 libro encontrado."
-                            : `${encontrados.length} libros encontrados.`;
+                        encontrados.length === 1 ? "1 libro encontrado." : `${encontrados.length} libros encontrados.`;
 
                     encontrados.forEach(({ libro, id }) => {
                         const tarjeta = document.createElement("div");
