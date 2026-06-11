@@ -68,51 +68,9 @@
         </header>
 
         <div class="contenido">
-            <h2>Leyendo Actualmente</h2>
-            <div class="galeria">
-                <div class="tarjeta">
-                    <a href="libro.html?id=0">
-                        <img src="Recursos/harrypoter.jpg" alt="Libro actual" />
-                    </a>
-                    <p>Harry Potter</p>
-                </div>
-                <div class="tarjeta">
-                    <a href="libro.html?id=1">
-                        <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="Libro actual" />
-                    </a>
-                    <p>El Hobbit</p>
-                </div>
-            </div>
-            <h2 style="margin-top: 48px">Pendientes</h2>
-            <div class="galeria">
-                <div class="tarjeta">
-                    <a href="libro.html?id=2">
-                        <img src="Recursos/Dracula.jpg" alt="Libro pendiente" />
-                    </a>
-                    <p>Drácula</p>
-                </div>
-                <div class="tarjeta">
-                    <a href="libro.html?id=3">
-                        <img
-                            src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
-                            alt="Libro pendiente"
-                        />
-                    </a>
-                    <p>Frankenstein</p>
-                </div>
-                <div class="tarjeta">
-                    <a href="libro.html?id=4">
-                        <img src="Recursos/libroIT.jpg" alt="Libro pendiente" />
-                    </a>
-                    <p>IT</p>
-                </div>
-                <div class="tarjeta">
-                    <a href="libro.html?id=5">
-                        <img src="Recursos/Pet Semetary_.jpg" alt="Libro pendiente" />
-                    </a>
-                    <p>Pet Sematary</p>
-                </div>
-            </div>
+            <h2>Mi lista de lectura</h2>
+            <p id="lista-aviso">Cargando tu lista...</p>
+            <div class="galeria" id="lista-galeria"></div>
         </div>
         <footer>
             <div class="footer-grid">
@@ -144,5 +102,7 @@
             </div>
         </footer>
         <script src="/js/header.js" defer></script>
+        <script src="/js/libros.js"></script>
+        <script src="/js/mi_lista.js" defer></script>
     </body>
 </html>

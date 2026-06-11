@@ -95,6 +95,37 @@
   transform: scale(0.98);
 }
 
+/* Botón para agregar o quitar el libro de "Mi lista" — Ciro Rivera */
+.btn-lista {
+  background-color: transparent;
+  color: #d9b3ff;
+  padding: 12px 24px;
+  border: 2px solid #d9b3ff;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 12px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-lista:hover {
+  background-color: #d9b3ff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.btn-lista:active {
+  transform: scale(0.98);
+}
+
+/* Cuando el libro ya está en la lista, el botón se muestra relleno */
+.btn-lista.en-lista {
+  background-color: #d9b3ff;
+  color: #000;
+}
+
 /* En móvil la portada y la información se apilan en vertical */
 @media (max-width: 700px) {
   .libro-detalle {
