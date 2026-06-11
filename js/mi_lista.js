@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
+            mostrarCerrarSesion();
+
             if (!datos.libros.length) {
                 aviso.textContent = "Tu lista está vacía. Agrega libros desde la página de cada libro.";
                 return;
@@ -29,6 +31,19 @@ document.addEventListener("DOMContentLoaded", () => {
             aviso.textContent = "No se pudo cargar tu lista. Intenta de nuevo más tarde.";
         });
 });
+
+// Muestra el botón de cerrar sesión (solo cuando hay sesión iniciada).
+function mostrarCerrarSesion() {
+    const contenido = document.querySelector(".contenido");
+    const titulo = contenido ? contenido.querySelector("h2") : null;
+    if (!titulo || contenido.querySelector(".cerrar-sesion")) return;
+
+    const boton = document.createElement("a");
+    boton.className = "cerrar-sesion";
+    boton.href = "logout.php";
+    boton.textContent = "Cerrar sesión";
+    titulo.insertAdjacentElement("afterend", boton);
+}
 
 // Construye la tarjeta de un libro
 function crearTarjeta(id, libro) {
