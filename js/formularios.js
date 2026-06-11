@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "error:password": { texto: "Las contraseñas no coinciden.", tipo: "error" },
         "error:existe": { texto: "Ese correo o usuario ya está registrado.", tipo: "error" },
         "error:credenciales": { texto: "Usuario o contraseña incorrectos.", tipo: "error" },
+        "error:sesion": { texto: "Inicia sesión para publicar una reseña.", tipo: "error" },
         "error:servidor": { texto: "Hubo un problema en el servidor. Intenta de nuevo.", tipo: "error" },
     };
 

@@ -1,10 +1,17 @@
 <?php
 // PHP hecho por Ciro Rivera
 // Guarda una reseña
+session_start();
 require "conexion.php";
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("Location: resenas.html");
+    exit;
+}
+
+// Solo los usuarios con sesión iniciada pueden publicar reseñas.
+if (!isset($_SESSION["usuario_id"])) {
+    header("Location: resenas.html?estado=error&motivo=sesion");
     exit;
 }
 

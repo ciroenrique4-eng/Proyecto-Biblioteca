@@ -23,4 +23,35 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    mostrarIndicadorSesion();
 });
+
+// Consulta la sesión y, si hay una iniciada, lo señala en el menú de navegación.
+function mostrarIndicadorSesion() {
+    fetch("sesion.php")
+        .then(respuesta => respuesta.json())
+        .then(datos => {
+            if (!datos.logueado) return;
+
+            const menu = document.querySelector(".menu");
+            if (menu && !menu.querySelector(".sesion-indicador")) {
+                const indicador = document.createElement("span");
+                indicador.className = "sesion-indicador";
+                indicador.textContent = datos.usuario || "Sesión activa";
+                indicador.title = "Sesión iniciada como " + (datos.usuario || "");
+                menu.appendChild(indicador);
+
+                const salir = document.createElement("a");
+                salir.className = "sesion-cerrar";
+                salir.href = "logout.php";
+                salir.textContent = "Cerrar sesión";
+                menu.appendChild(salir);
+            }
+
+            // Con la sesión iniciada, el icono de perfil ya no lleva al login.
+            const perfil = document.querySelector(".perfil");
+            if (perfil) perfil.href = "mi_lista.html";
+        })
+        .catch(() => {});
+}
