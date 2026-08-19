@@ -24,7 +24,7 @@
         <title>AZUU — Biblioteca Digital | Lee y descarga libros gratis en línea</title>
 
         <link rel="canonical" href="https://azuu.uk/index.html" />
-        <link rel="icon" type="image/png" href="/Recursos/logo.png" />
+        <link rel="icon" type="image/png" href="/Recursos/ui/logo.png" />
 
         <!-- Open Graph: vista previa al compartir en redes sociales -->
         <meta property="og:type" content="website" />
@@ -48,6 +48,7 @@
         <meta name="twitter:image" content="https://azuu.uk/Recursos/3.png" />
 
         <link rel="stylesheet" href="/styles/estilo1.css" />
+        <link rel="stylesheet" href="/styles/animaciones.css" />
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -64,86 +65,6 @@
             }
         </script>
         <style>
-            .hero {
-                min-height: 560px;
-                padding: 70px 70px 60px;
-                display: grid;
-                grid-template-columns: 1fr 2fr 1fr;
-                align-items: center;
-                gap: 40px;
-                position: relative;
-                overflow: hidden;
-                animation: fadeIn 1s ease-in-out;
-            }
-
-            /* Fondo borroso del hero: separado del contenido para poder aplicar blur sin afectar el texto */
-            #hero-bg {
-                position: absolute;
-                inset: -20px;
-                background-size: cover;
-                background-position: center;
-                filter: blur(8px) brightness(0.45);
-                transform: scale(1.05);
-                transition: background-image 0.4s ease;
-                z-index: 0;
-            }
-
-            /* El contenido del hero queda encima del fondo */
-            .hero > *:not(#hero-bg) {
-                position: relative;
-                z-index: 1;
-            }
-
-            /* Transición de fade al cambiar de banner */
-            .hero.hero-fade > *:not(#hero-bg) {
-                opacity: 0;
-                transition: opacity 0.4s ease;
-            }
-
-            .columna-texto {
-                max-width: 260px;
-            }
-
-            .columna-texto h3 {
-                color: #d9b3ff;
-                font-size: 28px;
-                margin-bottom: 18px;
-            }
-
-            .columna-texto p {
-                font-size: 17px;
-                line-height: 1.7;
-            }
-
-            .centro {
-                text-align: center;
-            }
-
-            .centro h1 {
-                font-size: 76px;
-                margin-bottom: 18px;
-            }
-
-            .centro p {
-                font-size: 18px;
-            }
-
-            .boton {
-                display: inline-block;
-                margin-top: 20px;
-                padding: 12px 24px;
-                background-color: #d9b3ff;
-                color: #000;
-                text-decoration: none;
-                border-radius: 8px;
-                font-weight: bold;
-                transition: background-color 0.3s ease;
-            }
-
-            .boton:hover {
-                background-color: #b894e0;
-            }
-
             .contenido {
                 padding: 28px 70px 50px;
             }
@@ -166,38 +87,13 @@
                 text-decoration: underline;
             }
 
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
             @media (max-width: 1100px) {
-                .hero {
-                    grid-template-columns: 1fr;
-                    text-align: center;
-                }
-
-                .columna-texto {
-                    max-width: 100%;
+                .contenido {
+                    padding: 28px 30px 40px;
                 }
             }
 
             @media (max-width: 700px) {
-                .hero {
-                    padding: 40px 20px;
-                }
-
-                .centro h1 {
-                    font-size: 46px;
-                }
-
                 .contenido {
                     padding: 28px 20px 40px;
                 }
@@ -229,27 +125,36 @@
                 </button>
                 <input type="text" placeholder="Buscar libros..." />
                 <a href="login.html" class="perfil">
-                    <img src="Recursos/1.png" alt="Perfil" />
+                    <img src="Recursos/ui/1.png" alt="Perfil" />
                 </a>
             </div>
         </header>
 
-        <section class="hero">
-            <div id="hero-bg"></div>
+        <section class="hero-parallax" id="hero-parallax">
+            <div class="hero-sticky">
+                <div class="hero-bg"></div>
+                <div id="hero-particles"></div>
 
-            <div class="columna-texto">
-                <h3>SINOPSIS</h3>
-                <p id="hero-sinopsis"></p>
-            </div>
+                <div class="parallax-scene" id="parallax-scene">
+                    <div class="parallax-row parallax-row-1" id="parallax-row-1"></div>
+                    <div class="parallax-row parallax-row-2" id="parallax-row-2"></div>
+                    <div class="parallax-row parallax-row-3" id="parallax-row-3"></div>
+                </div>
 
-            <div class="centro">
-                <h1 id="hero-titulo"></h1>
-                <a id="hero-boton" href="#" class="boton">Leer ahora</a>
-            </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">AZUU</h1>
+                    <p class="hero-subtitle">Tu puerta a mundos infinitos</p>
+                    <p class="hero-desc">Explora, lee y descarga miles de libros gratis en l&iacute;nea en la Biblioteca Digital AZUU.</p>
+                    <div class="hero-cta">
+                        <a href="explorar.html" class="hero-btn hero-btn-primary">Explorar cat&aacute;logo</a>
+                        <a href="contacto.html" class="hero-btn hero-btn-secondary">Sobre nosotros</a>
+                    </div>
+                </div>
 
-            <div class="columna-texto">
-                <h3>¿POR QUÉ LEERLA?</h3>
-                <p id="hero-porque"></p>
+                <div class="hero-scroll-indicator">
+                    <span>Despl&aacute;zate</span>
+                    <div class="scroll-arrow"></div>
+                </div>
             </div>
         </section>
         <br />
@@ -260,26 +165,26 @@
             <section class="galeria">
                 <div class="tarjeta">
                     <a href="libro.html?id=0">
-                        <img src="Recursos/harrypoter.jpg" alt="Harry Potter" />
+                        <img src="Recursos/portadas/harrypoter.jpg" alt="Harry Potter" />
                     </a>
                     <p>Harry Potter</p>
                 </div>
                 <div class="tarjeta">
                     <a href="libro.html?id=1">
-                        <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="El Hobbit" />
+                        <img src="Recursos/portadas/LIBRO_ El Hobbit.jpg" alt="El Hobbit" />
                     </a>
                     <p>El Hobbit</p>
                 </div>
                 <div class="tarjeta">
                     <a href="libro.html?id=2">
-                        <img src="Recursos/Dracula.jpg" alt="Drácula" />
+                        <img src="Recursos/portadas/Dracula.jpg" alt="Drácula" />
                     </a>
                     <p>Drácula</p>
                 </div>
                 <div class="tarjeta">
                     <a href="libro.html?id=3">
                         <img
-                            src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
+                            src="Recursos/portadas/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
                             alt="Frankenstein"
                         />
                     </a>
@@ -287,7 +192,7 @@
                 </div>
                 <div class="tarjeta">
                     <a href="libro.html?id=4">
-                        <img src="Recursos/libroIT.jpg" alt="IT" />
+                        <img src="Recursos/portadas/libroIT.jpg" alt="IT" />
                     </a>
                     <p>IT</p>
                 </div>
@@ -301,20 +206,20 @@
             <section class="galeria">
                 <div class="tarjeta">
                     <a href="libro.html?id=1">
-                        <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="El Hobbit" />
+                        <img src="Recursos/portadas/LIBRO_ El Hobbit.jpg" alt="El Hobbit" />
                     </a>
                     <p>El Hobbit</p>
                 </div>
                 <div class="tarjeta">
                     <a href="libro.html?id=2">
-                        <img src="Recursos/Dracula.jpg" alt="Drácula" />
+                        <img src="Recursos/portadas/Dracula.jpg" alt="Drácula" />
                     </a>
                     <p>Drácula</p>
                 </div>
                 <div class="tarjeta">
                     <a href="libro.html?id=3">
                         <img
-                            src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
+                            src="Recursos/portadas/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
                             alt="Frankenstein"
                         />
                     </a>
@@ -322,13 +227,13 @@
                 </div>
                 <div class="tarjeta">
                     <a href="libro.html?id=4">
-                        <img src="Recursos/libroIT.jpg" alt="IT" />
+                        <img src="Recursos/portadas/libroIT.jpg" alt="IT" />
                     </a>
                     <p>IT</p>
                 </div>
                 <div class="tarjeta">
                     <a href="libro.html?id=5">
-                        <img src="Recursos/Pet Semetary_.jpg" alt="Pet Sematary" />
+                        <img src="Recursos/portadas/Pet Semetary_.jpg" alt="Pet Sematary" />
                     </a>
                     <p>Pet Sematary</p>
                 </div>
@@ -343,26 +248,26 @@
             <section class="galeria">
                 <div class="tarjeta">
                     <a href="libro.html?id=0">
-                        <img src="Recursos/harrypoter.jpg" alt="Harry Potter" />
+                        <img src="Recursos/portadas/harrypoter.jpg" alt="Harry Potter" />
                     </a>
                     <p>Harry Potter</p>
                 </div>
                 <div class="tarjeta">
                     <a href="libro.html?id=1">
-                        <img src="Recursos/LIBRO_ El Hobbit.jpg" alt="El Hobbit" />
+                        <img src="Recursos/portadas/LIBRO_ El Hobbit.jpg" alt="El Hobbit" />
                     </a>
                     <p>El Hobbit</p>
                 </div>
                 <div class="tarjeta">
                     <a href="libro.html?id=2">
-                        <img src="Recursos/Dracula.jpg" alt="Drácula" />
+                        <img src="Recursos/portadas/Dracula.jpg" alt="Drácula" />
                     </a>
                     <p>Drácula</p>
                 </div>
                 <div class="tarjeta">
                     <a href="libro.html?id=3">
                         <img
-                            src="Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
+                            src="Recursos/portadas/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg"
                             alt="Frankenstein"
                         />
                     </a>
@@ -370,7 +275,7 @@
                 </div>
                 <div class="tarjeta">
                     <a href="libro.html?id=4">
-                        <img src="Recursos/libroIT.jpg" alt="IT" />
+                        <img src="Recursos/portadas/libroIT.jpg" alt="IT" />
                     </a>
                     <p>IT</p>
                 </div>
@@ -418,6 +323,6 @@
             </div>
         </footer>
         <script src="/js/header.js" defer></script>
-        <script src="js/banner.js"></script>
+        <script src="js/hero-parallax.js" defer></script>
     </body>
 </html>

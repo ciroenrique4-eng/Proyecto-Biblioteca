@@ -9,7 +9,7 @@ const libros = [
         editorial: "Bloomsbury",
         anio: 1997,
         isbn: "978-0747532743",
-        portada: "Recursos/harrypoter.jpg",
+        portada: "Recursos/portadas/harrypoter.jpg",
         descripcion:
             "La primera aventura de Harry Potter, donde descubre que es un mago y comienza su vida en Hogwarts.",
         archivo: null,
@@ -20,7 +20,7 @@ const libros = [
         editorial: "Allen & Unwin",
         anio: 1937,
         isbn: "978-0547928227",
-        portada: "Recursos/LIBRO_ El Hobbit.jpg",
+        portada: "Recursos/portadas/LIBRO_ El Hobbit.jpg",
         descripcion:
             "La historia de Bilbo Bolsón y su viaje inesperado junto a un grupo de enanos hacia la Montaña Solitaria.",
         archivo: null,
@@ -31,7 +31,7 @@ const libros = [
         editorial: "Archibald Constable & Co",
         anio: 1897,
         isbn: "978-0141439846",
-        portada: "Recursos/Dracula.jpg",
+        portada: "Recursos/portadas/Dracula.jpg",
         descripcion: "La clásica novela gótica que introdujo al Conde Drácula y definió la figura del vampiro moderno.",
         archivo: null,
     },
@@ -41,7 +41,7 @@ const libros = [
         editorial: "Lackington, Hughes, Harding, Mavor & Jones",
         anio: 1818,
         isbn: "978-0486282114",
-        portada: "Recursos/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg",
+        portada: "Recursos/portadas/Frankenstein, or the Modern Prometheus by Mary Shelly.jpg",
         descripcion:
             "La historia del doctor Victor Frankenstein y la criatura que creó, explorando temas de ciencia y humanidad.",
         archivo: null,
@@ -52,7 +52,7 @@ const libros = [
         editorial: "Viking",
         anio: 1986,
         isbn: "978-1501142970",
-        portada: "Recursos/libroIT.jpg",
+        portada: "Recursos/portadas/libroIT.jpg",
         descripcion:
             "Un grupo de amigos enfrenta a una entidad maligna que adopta la forma de un payaso llamado Pennywise.",
         archivo: null,
@@ -63,7 +63,7 @@ const libros = [
         editorial: "Doubleday",
         anio: 1983,
         isbn: "978-0743412285",
-        portada: "Recursos/Pet Semetary_.jpg",
+        portada: "Recursos/portadas/Pet Semetary_.jpg",
         descripcion:
             "Una inquietante historia sobre un cementerio de mascotas con poderes oscuros y sus consecuencias.",
         archivo: null,
@@ -74,7 +74,7 @@ const libros = [
         editorial: "Tokuma Shoten",
         anio: 1988,
         isbn: "978-4198616774",
-        portada: "Recursos/totoro.webp",
+        portada: "Recursos/portadas/totoro.webp",
         descripcion: "Un cuento mágico sobre dos hermanas que descubren criaturas fantásticas en el campo japonés.",
         archivo: null,
     },
@@ -84,7 +84,7 @@ const libros = [
         editorial: "Bantam Books",
         anio: 1996,
         isbn: "978-0553103540",
-        portada: "Recursos/A Game of Thrones _ Book 1 of A Song of Ice and Fire.jpg",
+        portada: "Recursos/portadas/A Game of Thrones _ Book 1 of A Song of Ice and Fire.jpg",
         descripcion:
             "El inicio de Canción de Hielo y Fuego, una épica lucha por el control de los Siete Reinos de Westeros.",
         archivo: null,
@@ -95,7 +95,7 @@ const libros = [
         editorial: "DAW Books",
         anio: 2007,
         isbn: "978-0756404741",
-        portada: "Recursos/The Name of the Wind (The Kingkiller Chronicle).jpg",
+        portada: "Recursos/portadas/The Name of the Wind (The Kingkiller Chronicle).jpg",
         descripcion:
             "La historia de Kvothe, un legendario mago y músico, contada en sus propias palabras desde una posada.",
         archivo: null,
@@ -106,7 +106,7 @@ const libros = [
         editorial: "Geoffrey Bles",
         anio: 1950,
         isbn: "978-0064404990",
-        portada: "Recursos/The Lion, the Witch and the Wardrobe.jpg",
+        portada: "Recursos/portadas/The Lion, the Witch and the Wardrobe.jpg",
         descripcion:
             "Cuatro hermanos descubren el reino mágico de Narnia a través de un ropero y deben luchar contra la Bruja Blanca.",
         archivo: null,
@@ -117,7 +117,7 @@ const libros = [
         editorial: "Tor Books",
         anio: 2010,
         isbn: "978-0765326355",
-        portada: "Recursos/The Way of Kings - Brian Sanderson.jpg",
+        portada: "Recursos/portadas/The Way of Kings - Brian Sanderson.jpg",
         descripcion:
             "El comienzo de El Archivo de las Tormentas, una ambiciosa epopeya de fantasía con un mundo radicalmente original.",
         archivo: null,
@@ -128,7 +128,7 @@ const libros = [
         editorial: "Viking Press",
         anio: 1959,
         isbn: "978-0143039976",
-        portada: "Recursos/Shirley Jackson, Jordan Peele and More_ 15 Terrifying Books to Read This Halloween.jpg",
+        portada: "Recursos/portadas/Shirley Jackson, Jordan Peele and More_ 15 Terrifying Books to Read This Halloween.jpg",
         descripcion:
             "Una casa con historia oscura atrae a un grupo de investigadores del mundo paranormal con consecuencias aterradoras.",
         archivo: null,
@@ -139,7 +139,7 @@ const libros = [
         editorial: "Editorial Terror",
         anio: 2020,
         isbn: "978-0000000000",
-        portada: "Recursos/la maldicion.jpg",
+        portada: "Recursos/portadas/la maldicion.jpg",
         descripcion:
             "Una colección de relatos de terror que exploran las maldiciones ancestrales y sus consecuencias en el mundo moderno.",
         archivo: null,
@@ -150,7 +150,7 @@ const libros = [
         editorial: "Apress",
         anio: 2014,
         isbn: "978-1484200773",
-        portada: "Recursos/GitBook.png",
+        portada: "Recursos/portadas/GitBook.png",
         descripcion:
             "La guía definitiva y de acceso libre sobre el sistema de control de versiones Git, desde los conceptos básicos hasta el uso avanzado.",
         archivo: "Recursos/Libros/progit.epub",

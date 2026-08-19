@@ -28,6 +28,28 @@ Azuu es un sitio web que permite a los usuarios explorar, buscar y acceder a lib
 | Git        | Control de versiones    |
 | GitHub     | Repositorio remoto      |
 
+---
+
+## Estructura del Proyecto
+
+```
+.
+├── *.html              Páginas del sitio (son las URLs públicas: /index.html, /explorar.html…)
+├── api/                Backend PHP — endpoints y conexión a MySQL
+├── db/azuu.sql         Esquema y datos de la base
+├── js/                 Scripts del sitio
+├── styles/             Hojas de estilo
+├── Recursos/
+│   ├── portadas/       Tapas de los libros del catálogo
+│   ├── banners/        Imágenes del carrusel de portada
+│   ├── ui/             Logo/favicon y avatar de perfil
+│   └── Libros/         Archivos descargables (epub)
+└── check_enlaces.py    Verifica que no haya enlaces ni imágenes rotas
+```
+
+Los `.html` viven en la raíz a propósito: mover uno cambiaría su URL y rompería
+`sitemap.xml`, `robots.txt` y los enlaces ya publicados.
+
 ## Autores
 
 - **Ciro Enrique Rivera López**

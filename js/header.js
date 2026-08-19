@@ -85,7 +85,7 @@ function mostrarMensajeSecreto() {
 }
 
 function mostrarIndicadorSesion() {
-    fetch("sesion.php")
+    fetch("/api/sesion.php")
         .then(respuesta => respuesta.json())
         .then(datos => {
             if (!datos.logueado) return;

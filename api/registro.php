@@ -4,7 +4,7 @@
 require "conexion.php";
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: crear_cuenta.html");
+    header("Location: /crear_cuenta.html");
     exit;
 }
 
@@ -15,27 +15,29 @@ $password = $_POST["password"] ?? "";
 $confirmar = $_POST["confirmar_password"] ?? "";
 
 if ($nombre === "" || $email === "" || $usuario === "" || $password === "") {
-    header("Location: crear_cuenta.html?estado=error&motivo=vacios");
+    header("Location: /crear_cuenta.html?estado=error&motivo=vacios");
     exit;
 }
 
 if ($password !== $confirmar) {
-    header("Location: crear_cuenta.html?estado=error&motivo=password");
+    header("Location: /crear_cuenta.html?estado=error&motivo=password");
     exit;
 }
 
 try {
+    // Nunca guardar la contraseña tal cual: se guarda el hash bcrypt.
+    $hash = password_hash($password, PASSWORD_DEFAULT);
     $sql = "INSERT INTO usuarios (nombre, email, usuario, password) VALUES (?, ?, ?, ?)";
     $stmt = $conexion->prepare($sql);
-    $stmt->bind_param("ssss", $nombre, $email, $usuario, $password);
+    $stmt->bind_param("ssss", $nombre, $email, $usuario, $hash);
     $stmt->execute();
-    header("Location: crear_cuenta.html?estado=ok");
+    header("Location: /crear_cuenta.html?estado=ok");
     exit;
 } catch (mysqli_sql_exception $e) {
     if ($e->getCode() === 1062) {
-        header("Location: crear_cuenta.html?estado=error&motivo=existe");
+        header("Location: /crear_cuenta.html?estado=error&motivo=existe");
     } else {
-        header("Location: crear_cuenta.html?estado=error&motivo=servidor");
+        header("Location: /crear_cuenta.html?estado=error&motivo=servidor");
     }
     exit;
 }

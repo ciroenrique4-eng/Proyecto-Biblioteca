@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const aviso = document.getElementById("lista-aviso");
     if (!galeria) return;
 
-    fetch("mi_lista_datos.php")
+    fetch("/api/mi_lista_datos.php")
         .then(respuesta => respuesta.json())
         .then(datos => {
             if (!datos.logueado) {
@@ -40,7 +40,7 @@ function mostrarCerrarSesion() {
 
     const boton = document.createElement("a");
     boton.className = "cerrar-sesion";
-    boton.href = "logout.php";
+    boton.href = "/api/logout.php";
     boton.textContent = "Cerrar sesión";
     titulo.insertAdjacentElement("afterend", boton);
 }

@@ -4,5 +4,5 @@
 session_start();
 $_SESSION = [];
 session_destroy();
-header("Location: index.html?estado=sesion_cerrada");
+header("Location: /index.html?estado=sesion_cerrada");
 exit;

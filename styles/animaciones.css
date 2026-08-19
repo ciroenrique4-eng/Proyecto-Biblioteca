@@ -1,0 +1,347 @@
+/* Hero Parallax — Cosmic Library */
+.hero-parallax {
+    position: relative;
+    height: 150vh;
+}
+
+.hero-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+/* Aurora background */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 80% 60% at 20% 40%, rgba(217, 179, 255, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 30%, rgba(99, 102, 241, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse 70% 40% at 50% 80%, rgba(124, 58, 237, 0.05) 0%, transparent 50%);
+    animation: aurora-drift 12s ease-in-out infinite alternate;
+    z-index: 0;
+}
+
+@keyframes aurora-drift {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(2deg); }
+    100% { transform: scale(1) rotate(-2deg); }
+}
+
+/* Particles */
+#hero-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(217, 179, 255, 0.25);
+    animation: particle-float linear infinite;
+    pointer-events: none;
+}
+
+@keyframes particle-float {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    10% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+/* 3D Parallax Scene */
+.parallax-scene {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+    z-index: 2;
+    /* transform set by JS */
+}
+
+/* Book rows */
+.parallax-row {
+    position: absolute;
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    padding: 0 2rem;
+    will-change: transform;
+}
+
+.parallax-row-1 { top: 8%; }
+.parallax-row-2 { top: 40%; }
+.parallax-row-3 { top: 72%; }
+
+/* Book Card */
+.book-card {
+    width: 180px;
+    height: 260px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.5s ease,
+                border-color 0.3s ease;
+    cursor: pointer;
+    display: block;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.book-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.4) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.book-card:hover::after {
+    opacity: 1;
+}
+
+.book-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.book-card:hover img {
+    transform: scale(1.1);
+}
+
+.book-card:hover {
+    transform: translateZ(50px) scale(1.08) translateY(-10px);
+    box-shadow:
+        0 20px 60px rgba(217, 179, 255, 0.25),
+        0 0 0 1px rgba(217, 179, 255, 0.15);
+    z-index: 10;
+}
+
+.book-card-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    z-index: 2;
+}
+
+.book-card:hover .book-card-overlay {
+    opacity: 1;
+}
+
+.book-card-overlay span {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Glow reflection on card hover */
+.book-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg,
+        rgba(217, 179, 255, 0.2) 0%,
+        transparent 40%,
+        transparent 60%,
+        rgba(99, 102, 241, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.book-card:hover::before {
+    opacity: 1;
+}
+
+/* Center Content */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    pointer-events: none;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero-title {
+    font-size: clamp(3.5rem, 14vw, 12rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, #d9b3ff 0%, #7c3aed 30%, #6366f1 60%, #a855f7 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 5s ease infinite;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+    filter: drop-shadow(0 0 40px rgba(217, 179, 255, 0.2));
+    user-select: none;
+}
+
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    25% { background-position: 100% 0%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.75rem);
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.hero-desc {
+    font-size: clamp(0.85rem, 1.3vw, 1.1rem);
+    color: rgba(255, 255, 255, 0.4);
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    pointer-events: auto;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    padding: 0.85rem 2.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hero-btn-primary {
+    background: linear-gradient(135deg, #d9b3ff, #a855f7);
+    color: #0b0b0b;
+    box-shadow: 0 4px 20px rgba(217, 179, 255, 0.3);
+}
+
+.hero-btn-primary:hover {
+    transform: scale(1.06) translateY(-2px);
+    box-shadow: 0 8px 35px rgba(217, 179, 255, 0.45);
+}
+
+.hero-btn-secondary {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+}
+
+.hero-btn-secondary:hover {
+    background: rgba(217, 179, 255, 0.1);
+    border-color: #d9b3ff;
+    color: #d9b3ff;
+    transform: translateY(-2px);
+}
+
+/* Scroll indicator */
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.5;
+    animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+.hero-scroll-indicator span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.hero-scroll-indicator .scroll-arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    transform: rotate(45deg);
+}
+
+@keyframes scroll-bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .book-card { width: 150px; height: 215px; }
+    .parallax-row { gap: 1.25rem; }
+}
+
+@media (max-width: 900px) {
+    .book-card { width: 120px; height: 175px; border-radius: 10px; }
+    .book-card-overlay { padding: 0.75rem; }
+    .book-card-overlay span { font-size: 0.7rem; }
+    .parallax-row { gap: 1rem; }
+    .parallax-row-1 { top: 12%; }
+    .parallax-row-2 { top: 42%; }
+    .parallax-row-3 { top: 72%; }
+    .hero-scroll-indicator { display: none; }
+}
+
+@media (max-width: 560px) {
+    .hero-parallax { height: 130vh; }
+    .book-card { width: 85px; height: 125px; border-radius: 8px; }
+    .book-card-overlay { display: none; }
+    .parallax-row { gap: 0.6rem; padding: 0 1rem; }
+    .parallax-row-1 { top: 15%; }
+    .parallax-row-2 { top: 45%; }
+    .parallax-row-3 { top: 75%; }
+    .hero-cta { flex-direction: column; align-items: center; }
+    .hero-btn { width: 100%; max-width: 250px; text-align: center; }
+    .hero-desc { margin-bottom: 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-parallax { height: auto; }
+    .hero-sticky { position: relative; height: auto; min-height: 100vh; }
+    .parallax-row { transform: none !important; }
+    .book-card { transition: none; }
+    .hero-bg, .particle { animation: none; }
+    .hero-title { animation: none; }
+}

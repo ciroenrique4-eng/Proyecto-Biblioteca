@@ -10,7 +10,7 @@ function cargarResenas() {
     const grid = document.querySelector(".reseñas-grid");
     if (!grid) return;
 
-    fetch("resenas_datos.php")
+    fetch("/api/resenas_datos.php")
         .then(respuesta => respuesta.json())
         .then(resenas => {
             // Se insertan al principio (antes de las de ejemplo) dejando la más reciente arriba.
@@ -51,7 +51,7 @@ function controlarFormulario() {
     const seccion = document.querySelector(".formulario-reseña");
     if (!seccion) return;
 
-    fetch("sesion.php")
+    fetch("/api/sesion.php")
         .then(respuesta => respuesta.json())
         .then(datos => {
             if (datos.logueado) return;

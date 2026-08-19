@@ -20,7 +20,7 @@
         <title>Reseñas de libros | Biblioteca Digital AZUU</title>
 
         <link rel="canonical" href="https://azuu.uk/resenas.html" />
-        <link rel="icon" type="image/png" href="/Recursos/logo.png" />
+        <link rel="icon" type="image/png" href="/Recursos/ui/logo.png" />
 
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Biblioteca Digital AZUU" />
@@ -211,7 +211,7 @@
                 </button>
                 <input type="text" placeholder="Buscar libros..." />
                 <a href="login.html" class="perfil">
-                    <img src="Recursos/1.png" alt="Perfil" />
+                    <img src="Recursos/ui/1.png" alt="Perfil" />
                 </a>
             </div>
         </header>
@@ -286,7 +286,7 @@
 
             <section class="formulario-reseña">
                 <h2>Escribe tu reseña</h2>
-                <form action="resena.php" method="POST">
+                <form action="/api/resena.php" method="POST">
                     <div class="form-group">
                         <label for="titulo">Título del libro</label>
                         <input type="text" id="titulo" name="titulo" placeholder="Ej. El Hobbit" required />

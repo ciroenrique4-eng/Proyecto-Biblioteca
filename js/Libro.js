@@ -37,7 +37,7 @@ function cargarLibro() {
 function configurarBotonLista(libroId) {
     const btn = document.getElementById("btn-lista");
     if (!btn) return;
-    fetch("mi_lista_datos.php")
+    fetch("/api/mi_lista_datos.php")
         .then(respuesta => respuesta.json())
         .then(datos => {
             if (!datos.logueado) {
@@ -52,7 +52,7 @@ function configurarBotonLista(libroId) {
             btn.onclick = () => {
                 btn.disabled = true;
                 const cuerpo = new URLSearchParams({ libro_id: libroId, accion: "alternar" });
-                fetch("mi_lista_accion.php", { method: "POST", body: cuerpo })
+                fetch("/api/mi_lista_accion.php", { method: "POST", body: cuerpo })
                     .then(respuesta => respuesta.json())
                     .then(resultado => {
                         if (resultado.ok) {

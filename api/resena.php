@@ -5,13 +5,13 @@ session_start();
 require "conexion.php";
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: resenas.html");
+    header("Location: /resenas.html");
     exit;
 }
 
 // Solo los usuarios con sesión iniciada pueden publicar reseñas.
 if (!isset($_SESSION["usuario_id"])) {
-    header("Location: resenas.html?estado=error&motivo=sesion");
+    header("Location: /resenas.html?estado=error&motivo=sesion");
     exit;
 }
 
@@ -21,7 +21,7 @@ $calificacion = (int)($_POST["calificacion"] ?? 0);
 $texto = trim($_POST["texto"] ?? "");
 
 if ($titulo === "" || $autor === "" || $texto === "" || $calificacion < 1 || $calificacion > 5) {
-    header("Location: resenas.html?estado=error&motivo=vacios");
+    header("Location: /resenas.html?estado=error&motivo=vacios");
     exit;
 }
 
@@ -30,9 +30,9 @@ try {
     $stmt = $conexion->prepare($sql);
     $stmt->bind_param("ssis", $titulo, $autor, $calificacion, $texto);
     $stmt->execute();
-    header("Location: resenas.html?estado=ok");
+    header("Location: /resenas.html?estado=ok");
     exit;
 } catch (mysqli_sql_exception $e) {
-    header("Location: resenas.html?estado=error&motivo=servidor");
+    header("Location: /resenas.html?estado=error&motivo=servidor");
     exit;
 }
